@@ -1,7 +1,7 @@
 #pragma once
 
 namespace NS_Comp_Data {
-	ref class Cad {
+	class Cad {
 	public:
 		System::String^ sSql;
 		System::String^ sCnx;
