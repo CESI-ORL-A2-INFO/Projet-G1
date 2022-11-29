@@ -1,4 +1,9 @@
 #pragma once
+#include "GestionClient.h"
+#include "GestionCommande.h"
+#include "GestionPersonnel.h"
+#include "GestionStock.h"
+#include "AffichageStat.h"
 
 namespace ProjetPOO {
 
@@ -46,6 +51,11 @@ namespace ProjetPOO {
 		/// Variable nécessaire au concepteur.
 		/// </summary>
 		System::ComponentModel::Container ^components;
+		GestionClient^ gestClient;
+		GestionCommande^ gestCom;
+		GestionPersonnel^ gestPers;
+		GestionStock^ gestStock;
+		AffichageStat^ stat;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -72,6 +82,7 @@ namespace ProjetPOO {
 			this->button_gestPersonnel->TabIndex = 0;
 			this->button_gestPersonnel->Text = L"Gestion Personnel";
 			this->button_gestPersonnel->UseVisualStyleBackColor = true;
+			this->button_gestPersonnel->Click += gcnew System::EventHandler(this, &MyForm::button_gestPersonnel_Click);
 			// 
 			// button_gestClient
 			// 
@@ -84,6 +95,7 @@ namespace ProjetPOO {
 			this->button_gestClient->TabIndex = 1;
 			this->button_gestClient->Text = L"Gestion Client";
 			this->button_gestClient->UseVisualStyleBackColor = true;
+			this->button_gestClient->Click += gcnew System::EventHandler(this, &MyForm::button_gestClient_Click);
 			// 
 			// button_gestCommande
 			// 
@@ -96,6 +108,7 @@ namespace ProjetPOO {
 			this->button_gestCommande->TabIndex = 2;
 			this->button_gestCommande->Text = L"Gestion Commande";
 			this->button_gestCommande->UseVisualStyleBackColor = true;
+			this->button_gestCommande->Click += gcnew System::EventHandler(this, &MyForm::button_gestCommande_Click);
 			// 
 			// button_gestStock
 			// 
@@ -108,6 +121,7 @@ namespace ProjetPOO {
 			this->button_gestStock->TabIndex = 3;
 			this->button_gestStock->Text = L"Gestion Stock";
 			this->button_gestStock->UseVisualStyleBackColor = true;
+			this->button_gestStock->Click += gcnew System::EventHandler(this, &MyForm::button_gestStock_Click);
 			// 
 			// button_stat
 			// 
@@ -120,6 +134,7 @@ namespace ProjetPOO {
 			this->button_stat->TabIndex = 4;
 			this->button_stat->Text = L"Affichage statistiques";
 			this->button_stat->UseVisualStyleBackColor = true;
+			this->button_stat->Click += gcnew System::EventHandler(this, &MyForm::button_stat_Click);
 			// 
 			// MyForm
 			// 
@@ -140,5 +155,25 @@ namespace ProjetPOO {
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void button_gestPersonnel_Click(System::Object^ sender, System::EventArgs^ e) {
+	gestPers = gcnew GestionPersonnel();
+	gestPers->Show();
+}
+private: System::Void button_gestClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	gestClient = gcnew GestionClient();
+	gestClient->Show();
+}
+private: System::Void button_gestCommande_Click(System::Object^ sender, System::EventArgs^ e) {
+	gestCom = gcnew GestionCommande();
+	gestCom->Show();
+}
+private: System::Void button_gestStock_Click(System::Object^ sender, System::EventArgs^ e) {
+	gestStock = gcnew GestionStock();
+	gestStock->Show();
+}
+private: System::Void button_stat_Click(System::Object^ sender, System::EventArgs^ e) {
+	stat = gcnew AffichageStat();
+	stat->Show();
+}
 };
 }
