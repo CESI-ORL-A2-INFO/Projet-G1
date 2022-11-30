@@ -1,7 +1,7 @@
 #include "ServicePersonnel.h"
 
 
-void ServicePersonnel::addPers(System::String^ nom, System::String^ prenom, System::String^ statut, int adresse){
+void CLServicePersonnel::ServicePersonnel::addPers(System::String^ nom, System::String^ prenom, System::String^ statut, int adresse){
 	
 	System::String^ sql;
 
@@ -16,7 +16,7 @@ void ServicePersonnel::addPers(System::String^ nom, System::String^ prenom, Syst
 }
 
 
-void ServicePersonnel::updatePers(int id_personnel, System::String^ nom, System::String^ prenom, System::String^ statut, int id_superieur) {
+void CLServicePersonnel::ServicePersonnel::updatePers(int id_personnel, System::String^ nom, System::String^ prenom, System::String^ statut, int id_superieur) {
 	System::String^ sql;
 
 	this->mapPers->setId(id_personnel);				// On associe la données entrée a l'ID du personnel dont on souhaite modifier les données
@@ -32,7 +32,7 @@ void ServicePersonnel::updatePers(int id_personnel, System::String^ nom, System:
 }
 
 
-void ServicePersonnel::delPers(int id_personnel) {
+void CLServicePersonnel::ServicePersonnel::delPers(int id_personnel) {
 	System::String^ sql;
 
 	this->mapPers->setId(id_personnel);				// On associe la données entrée a l'ID du personnel dont on souhaite supprimer les données
@@ -43,7 +43,7 @@ void ServicePersonnel::delPers(int id_personnel) {
 }
 
 
-DataSet ServicePersonnel::selectAllPers(System::String^ nom_table) {
+System::Data::DataSet^ CLServicePersonnel::ServicePersonnel::selectAllPers(System::String^ nom_table) {
 	System::String^ sql;
 
 	sql = this->mapPers->Select();
@@ -51,7 +51,7 @@ DataSet ServicePersonnel::selectAllPers(System::String^ nom_table) {
 	return this->pCad->getRows(sql, nom_table);
 }
 
-DataSet ServicePersonnel::selectPers(System::String^ nom_table, int id_personnel) {
+System::Data::DataSet^ CLServicePersonnel::ServicePersonnel::selectPers(System::String^ nom_table, int id_personnel) {
 	System::String^ sql;
 
 	sql = this->mapPers->Select();

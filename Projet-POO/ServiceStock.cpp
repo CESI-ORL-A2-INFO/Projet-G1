@@ -1,7 +1,7 @@
 #include "ServiceStock.h"
 
 
-void ServiceStock::addCata(System::String^ designation, System::String^ nature_article, System::String^ couleur, int seuil_approvisionnement, int id_tva, float prixHT) {
+void CLServiceStock::ServiceStock::addCata(System::String^ designation, System::String^ nature_article, System::String^ couleur, int seuil_approvisionnement, int id_tva, float prixHT) {
 	System::String^ sql;
 
 	this->mapCata->setDesignation(designation);										// On associe la données entrée a la désignation d'un article
@@ -17,7 +17,7 @@ void ServiceStock::addCata(System::String^ designation, System::String^ nature_a
 }
 
 
-void ServiceStock::updateCata(int id_catalogue, System::String^ designation, System::String^ nature_article, System::String^ couleur, int seuil_approvisionnement, int id_tva, float prixHT) {
+void CLServiceStock::ServiceStock::updateCata(int id_catalogue, System::String^ designation, System::String^ nature_article, System::String^ couleur, int seuil_approvisionnement, int id_tva, float prixHT) {
 	System::String^ sql;
 
 	this->mapCata->setIdCatalogue(id_catalogue);									// On associe la données entrée a l'ID du catalogue qu'on veut modifier
@@ -34,7 +34,7 @@ void ServiceStock::updateCata(int id_catalogue, System::String^ designation, Sys
 }
 
 
-void ServiceStock::delCata(int id_catalogue) {
+void CLServiceStock::ServiceStock::delCata(int id_catalogue) {
 	System::String^ sql;
 
 	this->mapCata->setIdCatalogue(id_catalogue);									// On associe la données entrée a l'ID du catalogue qu'on veut supprimer
@@ -45,7 +45,7 @@ void ServiceStock::delCata(int id_catalogue) {
 }
 
 
-System::Data::DataSet^ ServiceStock::selectAllCata(System::String^ nom_table) {
+System::Data::DataSet^ CLServiceStock::ServiceStock::selectAllCata(System::String^ nom_table) {
 	System::String^ sql;
 
 	sql = this->mapCata->Select();
