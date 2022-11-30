@@ -377,11 +377,14 @@ namespace ProjetPOO {
 			this->Controls->Add(this->TablePersonnel);
 			this->Name = L"GestionPersonnel";
 			this->Text = L"GestionPersonnel";
+			this->Load += gcnew System::EventHandler(this, &GestionPersonnel::GestionPersonnel_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TablePersonnel))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
 #pragma endregion
-	};
+	private: System::Void GestionPersonnel_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
 }

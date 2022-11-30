@@ -1,5 +1,5 @@
 #pragma once
-
+#include "ServiceClient.h"
 namespace ProjetPOO {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -73,7 +73,9 @@ namespace ProjetPOO {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
+		NS_Serv::ServiceClient^ servClient;
+		System::Data::DataSet^ dataClient;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -120,6 +122,7 @@ namespace ProjetPOO {
 			this->deleteClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
 				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->deleteClient->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->deleteClient->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->deleteClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->deleteClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -130,12 +133,14 @@ namespace ProjetPOO {
 			this->deleteClient->TabIndex = 6;
 			this->deleteClient->Text = L"Del";
 			this->deleteClient->UseVisualStyleBackColor = false;
+			this->deleteClient->Click += gcnew System::EventHandler(this, &GestionClient::deleteClient_Click);
 			// 
 			// updateClient
 			// 
 			this->updateClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
 				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->updateClient->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->updateClient->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->updateClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->updateClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -152,6 +157,7 @@ namespace ProjetPOO {
 			this->inserClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
 				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->inserClient->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->inserClient->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->inserClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->inserClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -162,6 +168,7 @@ namespace ProjetPOO {
 			this->inserClient->TabIndex = 4;
 			this->inserClient->Text = L"Ins";
 			this->inserClient->UseVisualStyleBackColor = false;
+			this->inserClient->Click += gcnew System::EventHandler(this, &GestionClient::inserClient_Click);
 			// 
 			// label1
 			// 
@@ -279,6 +286,7 @@ namespace ProjetPOO {
 			this->boxNom->Name = L"boxNom";
 			this->boxNom->Size = System::Drawing::Size(238, 22);
 			this->boxNom->TabIndex = 19;
+			this->boxNom->TextChanged += gcnew System::EventHandler(this, &GestionClient::boxNom_TextChanged);
 			// 
 			// boxPrenom
 			// 
@@ -350,6 +358,7 @@ namespace ProjetPOO {
 			this->loadClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
 				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->loadClient->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->loadClient->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->loadClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->loadClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -398,14 +407,21 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 	private: System::Void GestionClient_Load(System::Object^ sender, System::EventArgs^ e) {
-		
+		this->servClient = gcnew NS_Serv::ServiceClient();
 	}
 private: System::Void loadClient_Click(System::Object^ sender, System::EventArgs^ e) {
-	//this->TableClient->Refresh();
-	//this-> = this->;
-	//this-> = this->;
-	//this->TableClient->DataSource = this->;
-	//this->TableClient->DataMember = "Rsl";
+	this->TableClient->Refresh();
+	this->dataClient = this->servClient->selectAllClient("Rsl");
+	this->TableClient->DataSource = this->dataClient;
+	this->TableClient->DataMember = "Rsl";
+}
+private: System::Void deleteClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->servClient->delClient(int::Parse(this->boxNumClient->Text));
+}
+private: System::Void inserClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->servClient->addClient(this->dateNaissance->Text, this->dateFirstCommande->Text, this->boxNom->Text, this->boxPrenom->Text, int::Parse(this->boxIDAdresseLivraison->Text), int::Parse(this->boxIDAdresseFact->Text));
+}
+private: System::Void boxNom_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
