@@ -1,10 +1,11 @@
 #include "ServiceCommande.h"
 
-void ServiceCommande::addCommande(System::String^ nomSociete, float totalTTC, float montantRemise, int totalArticles, int ID_Facture, int numeroCLient, String^ dernierPaiement, String^ dateEmission, String^ datePaiement, String^ dateLivraison)
+void ServiceCommande::addCommande(System::String^ reference, System::String^ nomSociete, float totalTTC, float montantRemise, int totalArticles, int ID_Facture, int numeroCLient, String^ dernierPaiement, String^ dateEmission, String^ datePaiement, String^ dateLivraison)
 {
 
 	System::String^ sql;
 
+	this->mapCom->setReference(reference);
 	this->mapCom->setNomSociete(nomSociete); // On associe la données entrée au nom de la société  d'une commande
 	this->mapCom->setTotalTTC(totalTTC);
 	this->mapCom->setMontantRemise(montantRemise);
@@ -26,6 +27,7 @@ void updateCommande::updateCommande(System::String^ NomSociete, float TotalTTC, 
 
 	System::String^ sql;
 
+	this->mapCom->setReference(reference);
 	this->mapCom->setNomSociete(nomSociete);
 	this->mapCom->setTotalTTC(totalTTC);
 	this->mapCom->setMontantRemise(montantRemise);
@@ -43,11 +45,11 @@ void updateCommande::updateCommande(System::String^ NomSociete, float TotalTTC, 
 
 }
 
-void ServiceCommande::delCommande(int reference) {
+void ServiceCommande::delCommande(int totalArticles) {
 
 	System::String^ sql;
 
-	this->mapCom->setReference(reference);
+	this->mapCom->setTotalArticles(totalArticles);
 
 	sql = this->mapCom->Delete();
 
@@ -64,7 +66,7 @@ DataSet ServiceCommande::selectAllCom(System::String^ nom_table) {
 	return this->cCad->getRows(sql, nom_table );
 }
 
-DataSet ServiceCommande::selectCom(System::String^ nom_table, int reference) {
+DataSet ServiceCommande::selectCom(System::String^ nom_table, int totalArticles) {
 
 	System::String^ sql;
 
