@@ -144,6 +144,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Projet-POO.cpp" />
+    <ClCompile Include="ServicePersonnel.cpp" />
+    <ClCompile Include="ServiceStock.cpp" />
+    <ClCompile Include="Statistique.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ServicePersonnel.h" />
+    <ClInclude Include="ServiceStock.h" />
+    <ClInclude Include="Statistique.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
