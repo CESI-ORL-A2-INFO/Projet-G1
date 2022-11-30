@@ -1,33 +1,31 @@
 #pragma once
-#include <string>
-using namespace std;
 
 class Adresse {
 private:
 	int IDAdresse;
 	int NumeroRue;
 	int CodePostal;
-	string NomRue;
-	string Ville;
-	string TypeRue;
-	string sSql;
+	System::String^ NomRue;
+	System::String^ Ville;
+	System::String^ TypeRue;
+	System::String^ sSql;
 public:
-	string Select(void);
-	string Insert(void);
-	string Delete(void);
-	string Update(void);
+	System::String^ Select(void);
+	System::String^ Insert(void);
+	System::String^ Delete(void);
+	System::String^ Update(void);
 
 	void setIDAdresse(int);
 	void setNumeroRue(int);
 	void setCodePostal(int);
-	void setNomRue(string);
-	void setVille(string);
-	void setTypeRue(string);
+	void setNomRue(System::String^);
+	void setVille(System::String^);
+	void setTypeRue(System::String^);
 
 	int getIDAdresse(void);
 	int getNumeroRue(void);
 	int getCodePostal(void);
-	string getNomRue(void);
-	string getVille(void);
-	string getTypeRue(void);
+	System::String^ getNomRue(void);
+	System::String^ getVille(void);
+	System::String^ getTypeRue(void);
 };

@@ -1,37 +1,35 @@
 #pragma once
-#include <string>
-using namespace std;
 
 class Client {
 private:
-	int NumeroClient;
-	int AdresseLivraison;
-	int AdressePaiement;
-	string DateDeNaissance;
-	string DatePremiereCommande;
-	string NomClient;
-	string PrenomClient;
-	string sSql;
+	int Numero_client;
+	int Id_Adresse_Livrer;
+	int Id_Adresse;
+	System::String^ Date_naissance;
+	System::String^ Date_premiere_commande;
+	System::String^ Nom_client;
+	System::String^ Prenom_client;
+	System::String^ sSql;
 
 public:
-	string Select(void);
-	string Insert(void);
-	string Delete(void);
-	string Update(void);
+	System::String^ Select(void);
+	System::String^ Insert(void);
+	System::String^ Delete(void);
+	System::String^ Update(void);
 
 	void setNumeroClient(int);
 	void setAdresseLivraison(int);
 	void setAdressePaiement(int);
-	void setDateDeNaissance(string);
-	void setDatePremiereCommande(string);
-	void setNomClient(string);
-	void setPrenomClient(string);
+	void setDateDeNaissance(System::String^);
+	void setDatePremiereCommande(System::String^);
+	void setNomClient(System::String^);
+	void setPrenomClient(System::String^);
 	
 	int getNumeroClient(void);
 	int getAdresseLivraison(void);
 	int getAdressePaiement(void);
-	string getDateDeNaissance(void);
-	string getDatePremiereCommande(void);
-	string getNomClient(void);
-	string getPrenomClient(void);
+	System::String^ getDateDeNaissance(void);
+	System::String^ getDatePremiereCommande(void);
+	System::String^ getNomClient(void);
+	System::String^ getPrenomClient(void);
 };

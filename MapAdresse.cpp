@@ -1,68 +1,66 @@
 #include "MapAdresse.h"
-#include <string>
-using namespace std;
 
-string Adresse::Select(void)
+System::String^ Adresse::Select(void)
 {
-	return "SELECT [IDAdresse], [NumeroRue], [CodePostal], [NomRue], [Ville], [TypeRue] FROM Adresse";
+	return "SELECT [Id_Adresse], [Numero_Rue], [Code_Postal], [Nom_rue], [Ville], [Type_Rue] FROM Adresse";
 }
-string Adresse::Insert(void)
+System::String^ Adresse::Insert(void)
 {
-	return "INSERT INTO Adresse (IDAdresse, NumeroRue, CodePostal, NomRue, Ville, TypeRue) VALUES('" + this->IDAdresse + "', '" + this->NumeroRue + "', '" + this->CodePostal + "','" + this->NomRue + "','" + this->Ville + "','" + this->TypeRue +"'); ";
+	return "INSERT INTO Adresse (Id_Adresse, Numero_Rue, Code_Postal, Nom_rue, Ville, Type_Rue) VALUES('" + this->Id_Adresse + "', '" + this->Numero_Rue + "', '" + this->Code_Postal + "','" + this->Nom_rue + "','" + this->Ville + "','" + this->Type_Rue +"'); ";
 }
-string Adresse::Delete(void)
+System::String^ Adresse::Delete(void)
 {
-	return "DELETE FROM Adresse WHERE Adresse.IDAdresse VALUES('" + this->IDAdresse + "')";
+	return "DELETE FROM Adresse WHERE Adresse.Id_Adresse VALUES('" + this->Id_Adresse + "')";
 }
-string Adresse::Update(void)
+System::String^ Adresse::Update(void)
 {
-	return "UPDATE Adresse SET IDAdresse = '" + this->IDAdresse + "', NumeroRue = '" + this->NumeroRue + "', CodePostal = '" + this->CodePostal + "', NomRue = '" + this->NomRue + "', Ville = '" + this->Ville + "', TypeRue = '" + this->TypeRue)"; ";
+	return "UPDATE Adresse SET Id_Adresse = '" + this->Id_Adresse + "', NumeroRue = '" + this->Numero_Rue + "', CodePostal = '" + this->Code_Postal + "', NomRue = '" + this->Nom_rue + "', Ville = '" + this->Ville + "', TypeRue = '" + this->Type_Rue)"; ";
 }
 void Adresse::setIDAdresse(int ID)
 {
-	this->IDAdresse = ID;
+	this->Id_Adresse = ID;
 }
 void Adresse::setNumeroRue(int num)
 {
-	this->NumeroRue = num;
+	this->Numero_Rue = num;
 }
 void Adresse::setCodePostal(int cp)
 {
-	this->CodePostal = cp;
+	this->Code_Postal = cp;
 }
-void Adresse::setNomRue(string rue)
+void Adresse::setNomRue(System::String^ rue)
 {
-	this->NomRue = rue;
+	this->Nom_rue = rue;
 }
-void Adresse::setVille(string ville)
+void Adresse::setVille(System::String^ ville)
 {
 	this->Ville = ville;
 }
-void Adresse::setTypeRue(string type)
+void Adresse::setTypeRue(System::String^ type)
 {
-	this->TypeRue = type;
+	this->Type_Rue = type;
 }
 int Adresse::getIDAdresse(void) 
 { 
-	return this->IDAdresse; 
+	return this->Id_Adresse; 
 }
 int Adresse::getNumeroRue(void)
 {
-	return this->NumeroRue;
+	return this->Numero_Rue;
 }
 int Adresse::getCodePostal(void)
 {
-	return this->CodePostal;
+	return this->Code_Postal;
 }
-string Adresse::getNomRue(void)
+System::String^ Adresse::getNomRue(void)
 {
-	return this->NomRue;
+	return this->Nom_rue;
 }
-string Adresse::getVille(void)
+System::String^ Adresse::getVille(void)
 {
 	return this->Ville;
 }
-string Adresse::getTypeRue(void)
+System::String^ Adresse::getTypeRue(void)
 {
-	return this->TypeRue;
+	return this->TyperRue;
 }
