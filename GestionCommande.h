@@ -35,9 +35,9 @@ namespace ProjetPOO {
 			}
 		}
 	private: System::Windows::Forms::DataGridView^ TableCommande;
-	private: System::Windows::Forms::Button^ deleteCommande;
-	private: System::Windows::Forms::Button^ updateCommande;
-	private: System::Windows::Forms::Button^ inserCommande;
+
+
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label4;
@@ -58,7 +58,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ boxSateLivraison;
 	private: System::Windows::Forms::TextBox^ boxNumClient;
 	private: System::Windows::Forms::TextBox^ boxIDFacture;
-	private: System::Windows::Forms::Button^ loadCommande;
+
 	protected:
 
 
@@ -80,9 +80,6 @@ namespace ProjetPOO {
 		void InitializeComponent(void)
 		{
 			this->TableCommande = (gcnew System::Windows::Forms::DataGridView());
-			this->deleteCommande = (gcnew System::Windows::Forms::Button());
-			this->updateCommande = (gcnew System::Windows::Forms::Button());
-			this->inserCommande = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label4 = (gcnew System::Windows::Forms::Label());
@@ -103,7 +100,6 @@ namespace ProjetPOO {
 			this->boxSateLivraison = (gcnew System::Windows::Forms::TextBox());
 			this->boxNumClient = (gcnew System::Windows::Forms::TextBox());
 			this->boxIDFacture = (gcnew System::Windows::Forms::TextBox());
-			this->loadCommande = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TableCommande))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -117,54 +113,6 @@ namespace ProjetPOO {
 			this->TableCommande->RowTemplate->Height = 24;
 			this->TableCommande->Size = System::Drawing::Size(493, 585);
 			this->TableCommande->TabIndex = 2;
-			// 
-			// deleteCommande
-			// 
-			this->deleteCommande->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->deleteCommande->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->deleteCommande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->deleteCommande->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->deleteCommande->Location = System::Drawing::Point(0, 428);
-			this->deleteCommande->Name = L"deleteCommande";
-			this->deleteCommande->Size = System::Drawing::Size(430, 54);
-			this->deleteCommande->TabIndex = 9;
-			this->deleteCommande->Text = L"Del";
-			this->deleteCommande->UseVisualStyleBackColor = false;
-			// 
-			// updateCommande
-			// 
-			this->updateCommande->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->updateCommande->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->updateCommande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->updateCommande->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->updateCommande->Location = System::Drawing::Point(0, 482);
-			this->updateCommande->Name = L"updateCommande";
-			this->updateCommande->Size = System::Drawing::Size(430, 51);
-			this->updateCommande->TabIndex = 8;
-			this->updateCommande->Text = L"Upd";
-			this->updateCommande->UseVisualStyleBackColor = false;
-			// 
-			// inserCommande
-			// 
-			this->inserCommande->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->inserCommande->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->inserCommande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->inserCommande->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->inserCommande->Location = System::Drawing::Point(0, 533);
-			this->inserCommande->Name = L"inserCommande";
-			this->inserCommande->Size = System::Drawing::Size(430, 52);
-			this->inserCommande->TabIndex = 7;
-			this->inserCommande->Text = L"Ins";
-			this->inserCommande->UseVisualStyleBackColor = false;
 			// 
 			// label1
 			// 
@@ -426,22 +374,6 @@ namespace ProjetPOO {
 			this->boxIDFacture->Size = System::Drawing::Size(238, 22);
 			this->boxIDFacture->TabIndex = 28;
 			// 
-			// loadCommande
-			// 
-			this->loadCommande->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->loadCommande->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->loadCommande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->loadCommande->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->loadCommande->Location = System::Drawing::Point(0, 374);
-			this->loadCommande->Name = L"loadCommande";
-			this->loadCommande->Size = System::Drawing::Size(430, 54);
-			this->loadCommande->TabIndex = 29;
-			this->loadCommande->Text = L"Load";
-			this->loadCommande->UseVisualStyleBackColor = false;
-			// 
 			// GestionCommande
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -449,7 +381,6 @@ namespace ProjetPOO {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
 				static_cast<System::Int32>(static_cast<System::Byte>(44)));
 			this->ClientSize = System::Drawing::Size(923, 585);
-			this->Controls->Add(this->loadCommande);
 			this->Controls->Add(this->boxIDFacture);
 			this->Controls->Add(this->boxNumClient);
 			this->Controls->Add(this->boxSateLivraison);
@@ -470,9 +401,6 @@ namespace ProjetPOO {
 			this->Controls->Add(this->label10);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->deleteCommande);
-			this->Controls->Add(this->updateCommande);
-			this->Controls->Add(this->inserCommande);
 			this->Controls->Add(this->TableCommande);
 			this->Name = L"GestionCommande";
 			this->Text = L"GestionCommande";

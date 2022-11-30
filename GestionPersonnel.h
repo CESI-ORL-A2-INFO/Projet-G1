@@ -36,9 +36,9 @@ namespace ProjetPOO {
 		}
 	private: System::Windows::Forms::DataGridView^ TablePersonnel;
 	protected:
-	private: System::Windows::Forms::Button^ inserPers;
-	private: System::Windows::Forms::Button^ updatePersonnel;
-	private: System::Windows::Forms::Button^ deletePersonnel;
+
+
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -54,7 +54,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ boxNom;
 	private: System::Windows::Forms::TextBox^ boxID;
 	private: System::Windows::Forms::TextBox^ dateEmbauche;
-	private: System::Windows::Forms::Button^ loadPersonnel;
+
 
 
 	private:
@@ -71,9 +71,6 @@ namespace ProjetPOO {
 		void InitializeComponent(void)
 		{
 			this->TablePersonnel = (gcnew System::Windows::Forms::DataGridView());
-			this->inserPers = (gcnew System::Windows::Forms::Button());
-			this->updatePersonnel = (gcnew System::Windows::Forms::Button());
-			this->deletePersonnel = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -88,7 +85,6 @@ namespace ProjetPOO {
 			this->boxNom = (gcnew System::Windows::Forms::TextBox());
 			this->boxID = (gcnew System::Windows::Forms::TextBox());
 			this->dateEmbauche = (gcnew System::Windows::Forms::TextBox());
-			this->loadPersonnel = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TablePersonnel))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -102,54 +98,6 @@ namespace ProjetPOO {
 			this->TablePersonnel->RowTemplate->Height = 24;
 			this->TablePersonnel->Size = System::Drawing::Size(493, 585);
 			this->TablePersonnel->TabIndex = 0;
-			// 
-			// inserPers
-			// 
-			this->inserPers->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->inserPers->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->inserPers->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->inserPers->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->inserPers->Location = System::Drawing::Point(0, 533);
-			this->inserPers->Name = L"inserPers";
-			this->inserPers->Size = System::Drawing::Size(430, 52);
-			this->inserPers->TabIndex = 1;
-			this->inserPers->Text = L"Ins";
-			this->inserPers->UseVisualStyleBackColor = false;
-			// 
-			// updatePersonnel
-			// 
-			this->updatePersonnel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->updatePersonnel->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->updatePersonnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->updatePersonnel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->updatePersonnel->Location = System::Drawing::Point(0, 482);
-			this->updatePersonnel->Name = L"updatePersonnel";
-			this->updatePersonnel->Size = System::Drawing::Size(430, 51);
-			this->updatePersonnel->TabIndex = 2;
-			this->updatePersonnel->Text = L"Upd";
-			this->updatePersonnel->UseVisualStyleBackColor = false;
-			// 
-			// deletePersonnel
-			// 
-			this->deletePersonnel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->deletePersonnel->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->deletePersonnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->deletePersonnel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->deletePersonnel->Location = System::Drawing::Point(0, 428);
-			this->deletePersonnel->Name = L"deletePersonnel";
-			this->deletePersonnel->Size = System::Drawing::Size(430, 54);
-			this->deletePersonnel->TabIndex = 3;
-			this->deletePersonnel->Text = L"Del";
-			this->deletePersonnel->UseVisualStyleBackColor = false;
 			// 
 			// label1
 			// 
@@ -333,22 +281,6 @@ namespace ProjetPOO {
 			this->dateEmbauche->Size = System::Drawing::Size(238, 22);
 			this->dateEmbauche->TabIndex = 18;
 			// 
-			// loadPersonnel
-			// 
-			this->loadPersonnel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->loadPersonnel->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->loadPersonnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->loadPersonnel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->loadPersonnel->Location = System::Drawing::Point(0, 374);
-			this->loadPersonnel->Name = L"loadPersonnel";
-			this->loadPersonnel->Size = System::Drawing::Size(430, 54);
-			this->loadPersonnel->TabIndex = 30;
-			this->loadPersonnel->Text = L"Load";
-			this->loadPersonnel->UseVisualStyleBackColor = false;
-			// 
 			// GestionPersonnel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -356,7 +288,6 @@ namespace ProjetPOO {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
 				static_cast<System::Int32>(static_cast<System::Byte>(44)));
 			this->ClientSize = System::Drawing::Size(923, 585);
-			this->Controls->Add(this->loadPersonnel);
 			this->Controls->Add(this->dateEmbauche);
 			this->Controls->Add(this->boxID);
 			this->Controls->Add(this->boxNom);
@@ -371,9 +302,6 @@ namespace ProjetPOO {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->deletePersonnel);
-			this->Controls->Add(this->updatePersonnel);
-			this->Controls->Add(this->inserPers);
 			this->Controls->Add(this->TablePersonnel);
 			this->Name = L"GestionPersonnel";
 			this->Text = L"GestionPersonnel";

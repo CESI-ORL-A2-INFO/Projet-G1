@@ -38,7 +38,7 @@ void ServiceClient::udpdateClient(int numero_Client, System::String^ datedenaiss
 
 
 
-	sql = this->mapClient->Insert();  // On insere les données dans la base de données 
+	sql = this->mapClient->Update();  // On insere les données dans la base de données 
 	this->clientCad->actionRows(sql);
 
 }
@@ -46,9 +46,7 @@ void ServiceClient::udpdateClient(int numero_Client, System::String^ datedenaiss
 void ServiceClient::delClient(int numClient) {
 
 	System::String^ sql;
-
 	this->mapClient->setNumeroClient(numClient);
-
 	sql = this->mapClient->Delete();
 	this->clientCad->actionRows(sql);
 
