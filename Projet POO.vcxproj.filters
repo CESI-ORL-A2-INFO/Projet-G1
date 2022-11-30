@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Fichiers sources">
@@ -29,7 +29,8 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="MapClient.cpp">
-
+		<Filter>Fichiers sources</Filter>
+    </ClCompile>
     <ClCompile Include="GestionPersonnel.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -50,7 +51,8 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="ServiceClient.cpp">
-
+		<Filter>Fichiers sources</Filter>
+    </ClCompile>
     <ClCompile Include="MapCommande.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -78,7 +80,8 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="MapClient.h">
-
+		<Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
     <ClInclude Include="GestionPersonnel.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -99,7 +102,8 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="ServiceClient.h">
-
+		<Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
     <ClInclude Include="MapCommande.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
