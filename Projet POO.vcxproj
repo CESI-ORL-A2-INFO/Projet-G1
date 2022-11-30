@@ -130,6 +130,7 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MapAdresse.h" />
+    <ClInclude Include="MapPersonnel.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainWindow.resx">
