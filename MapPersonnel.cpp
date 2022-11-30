@@ -1,5 +1,7 @@
 #include "MapPersonnel.h"
 
+using namespace NS_Comp;
+
 System::String^ Personnel::Select(void)
 {
 	return "SELECT [Id_Personnel], [Id_Superieur], [Date_Embauche], [Nom_Personnel], [Prenom_Personnel], [Statut], [Id_Adresse] FROM Personnel";

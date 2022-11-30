@@ -35,9 +35,9 @@ namespace ProjetPOO {
 			}
 		}
 	private: System::Windows::Forms::DataGridView^ TableStock;
-	private: System::Windows::Forms::Button^ deleteStock;
-	private: System::Windows::Forms::Button^ updateStock;
-	private: System::Windows::Forms::Button^ inserStock;
+
+
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -52,7 +52,7 @@ namespace ProjetPOO {
 	private: System::Windows::Forms::TextBox^ boxCouleur;
 	private: System::Windows::Forms::TextBox^ boxDesignation;
 	private: System::Windows::Forms::TextBox^ boxTVA;
-	private: System::Windows::Forms::Button^ loadStock;
+
 	protected:
 
 
@@ -74,9 +74,6 @@ namespace ProjetPOO {
 		void InitializeComponent(void)
 		{
 			this->TableStock = (gcnew System::Windows::Forms::DataGridView());
-			this->deleteStock = (gcnew System::Windows::Forms::Button());
-			this->updateStock = (gcnew System::Windows::Forms::Button());
-			this->inserStock = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -91,7 +88,6 @@ namespace ProjetPOO {
 			this->boxCouleur = (gcnew System::Windows::Forms::TextBox());
 			this->boxDesignation = (gcnew System::Windows::Forms::TextBox());
 			this->boxTVA = (gcnew System::Windows::Forms::TextBox());
-			this->loadStock = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TableStock))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -105,54 +101,6 @@ namespace ProjetPOO {
 			this->TableStock->RowTemplate->Height = 24;
 			this->TableStock->Size = System::Drawing::Size(493, 585);
 			this->TableStock->TabIndex = 3;
-			// 
-			// deleteStock
-			// 
-			this->deleteStock->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->deleteStock->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->deleteStock->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->deleteStock->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->deleteStock->Location = System::Drawing::Point(0, 428);
-			this->deleteStock->Name = L"deleteStock";
-			this->deleteStock->Size = System::Drawing::Size(430, 54);
-			this->deleteStock->TabIndex = 12;
-			this->deleteStock->Text = L"Del";
-			this->deleteStock->UseVisualStyleBackColor = false;
-			// 
-			// updateStock
-			// 
-			this->updateStock->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->updateStock->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->updateStock->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->updateStock->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->updateStock->Location = System::Drawing::Point(0, 482);
-			this->updateStock->Name = L"updateStock";
-			this->updateStock->Size = System::Drawing::Size(430, 51);
-			this->updateStock->TabIndex = 11;
-			this->updateStock->Text = L"Upd";
-			this->updateStock->UseVisualStyleBackColor = false;
-			// 
-			// inserStock
-			// 
-			this->inserStock->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->inserStock->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->inserStock->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->inserStock->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->inserStock->Location = System::Drawing::Point(0, 533);
-			this->inserStock->Name = L"inserStock";
-			this->inserStock->Size = System::Drawing::Size(430, 52);
-			this->inserStock->TabIndex = 10;
-			this->inserStock->Text = L"Ins";
-			this->inserStock->UseVisualStyleBackColor = false;
 			// 
 			// label1
 			// 
@@ -336,22 +284,6 @@ namespace ProjetPOO {
 			this->boxTVA->Size = System::Drawing::Size(238, 22);
 			this->boxTVA->TabIndex = 26;
 			// 
-			// loadStock
-			// 
-			this->loadStock->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->loadStock->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->loadStock->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->loadStock->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->loadStock->Location = System::Drawing::Point(0, 374);
-			this->loadStock->Name = L"loadStock";
-			this->loadStock->Size = System::Drawing::Size(430, 54);
-			this->loadStock->TabIndex = 30;
-			this->loadStock->Text = L"Load";
-			this->loadStock->UseVisualStyleBackColor = false;
-			// 
 			// GestionStock
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -359,7 +291,6 @@ namespace ProjetPOO {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
 				static_cast<System::Int32>(static_cast<System::Byte>(44)));
 			this->ClientSize = System::Drawing::Size(923, 585);
-			this->Controls->Add(this->loadStock);
 			this->Controls->Add(this->boxTVA);
 			this->Controls->Add(this->boxDesignation);
 			this->Controls->Add(this->boxCouleur);
@@ -374,9 +305,6 @@ namespace ProjetPOO {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->deleteStock);
-			this->Controls->Add(this->updateStock);
-			this->Controls->Add(this->inserStock);
 			this->Controls->Add(this->TableStock);
 			this->Name = L"GestionStock";
 			this->Text = L"GestionStock";

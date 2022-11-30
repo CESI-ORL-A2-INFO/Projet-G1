@@ -1,24 +1,25 @@
 #pragma once
 
-#include "GestionClient.h"
 #include "MapClient.h"
 #include "MapAdresse.h"
-
-ref class ServiceClient
-{
+#include "Cad.h"
+namespace NS_Serv {
+	ref class ServiceClient
+	{
 	private:
-		clientCad : CAD;
-		mapClient:MapClient;
-		adresseLivr:MapAdresse;
-		adressePaiement:MapAdresse;
-		recevoir:MapRecevoir;
+		NS_Comp_Data::Cad^ clientCad;
+		NS_Comp::Client^ mapClient;
+		NS_Comp::Adresse^ adresseLivr;
+		NS_Comp::Adresse^ adressePaiement;
 
-	public : 
+	public:
+		ServiceClient();
 		void addClient(System::String^, System::String^, System::String^, System::String^, int, int);
 		void udpdateClient(int, System::String^, System::String^, System::String^, System::String^, int, int);
 		void delClient(int);
-		DataSet selectAllClient(System::String^);
-		DataSet selectClient(System::String^, int);
+		System::Data::DataSet^ selectAllClient(System::String^);
+		//System::Data::DataSet^ selectClient(System::String^, int);
 
-};
+	};
+}
 

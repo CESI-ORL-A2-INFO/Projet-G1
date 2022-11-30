@@ -77,6 +77,7 @@ namespace ProjetPOO {
 				static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->button_gestPersonnel->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button_gestPersonnel->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button_gestPersonnel->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button_gestPersonnel->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 16.16F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->button_gestPersonnel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)),
@@ -95,6 +96,7 @@ namespace ProjetPOO {
 				static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->button_gestClient->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button_gestClient->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button_gestClient->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button_gestClient->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 16.16F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button_gestClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)),
@@ -113,6 +115,7 @@ namespace ProjetPOO {
 				static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->button_gestCommande->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button_gestCommande->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button_gestCommande->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button_gestCommande->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 16.16F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button_gestCommande->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)),
@@ -131,6 +134,7 @@ namespace ProjetPOO {
 				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->button_gestStock->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button_gestStock->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button_gestStock->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button_gestStock->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 16.16F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button_gestStock->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -149,6 +153,7 @@ namespace ProjetPOO {
 				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->button_stat->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->button_stat->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button_stat->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->button_stat->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 16.16F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button_stat->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),

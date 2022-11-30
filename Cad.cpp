@@ -2,7 +2,7 @@
 
 
 NS_Comp_Data::Cad::Cad(void) {
-	this->sCnx = "Data Source = projet-poo-g1.database.windows.net; Initial Catalog = Projet-G1; User ID = Rida; Password = Bilex1234";
+	this->sCnx = "Data Source=projet-poo-g1.database.windows.net;Initial Catalog=Projet-G1;User ID=Rida;Password=Bilex1234";
 
 	this->sSql = "Rien";
 

@@ -1,20 +1,22 @@
 #include "MapClient.h"
 
-System::String^ Client::Select(void)
+using namespace NS_Comp;
+
+System::String^ Client::Select()
 {
-	return "SELECT [Numero_client], [Date_naissance], [Date_premiere_commande], [Nom_client], [Prenom_client], [Id_Adresse], [Id_Adresse_Livrer] FROM Client";
+	return "SELECT * FROM [Client]";
 }
-System::String^ Client::Insert(void)
+System::String^ Client::Insert()
 {
-	return "INSERT INTO Client (Numero_client, Date_naissance, Date_premiere_commande, Nom_client, Prenom_client, Id_Adresse, Id_Adresse_Livrer) VALUES('" + this->Numero_client + "', '" + this->Date_naissance + "','" + this->Date_premiere_commande + "','" + this->Nom_client + "','" + this->Prenom_client + "','" + this->Id_Adresse + "','" + this->Id_Adresse_Livrer +"'); ";
+	return "INSERT INTO [Client] (Date_naissance, Date_premiere_commande, Nom_client, Prenom_client, Id_Adresse, Id_Adresse_Livrer) VALUES( '" + this->Date_naissance + "','" + this->Date_premiere_commande + "','" + this->Nom_client + "','" + this->Prenom_client + "','" + this->Id_Adresse + "','" + this->Id_Adresse_Livrer +"')";
 }
-System::String^ Client::Delete(void)
+System::String^ Client::Delete()
 {
-	return "DELETE FROM Client WHERE Client.Numero_client VALUES('" + this->Numero_client + "')";
+	return "DELETE FROM [Client] WHERE [Numero_client] ='" + this->Numero_client + "';";
 }
-System::String^ Client::Update(void)
+System::String^ Client::Update()
 {
-	return "UPDATE Client SET Numero_client = '" + this->Numero_client + "', Date_naissance = '" + this->Date_naissance + "', Date_premiere_commande = '" + this->Date_premiere_commande + "', Nom_client = '" + this->Nom_client + "', Prenom_client = '" + this->Prenom_client + "', Id_Adresse = '" + this->Id_Adresse + "','" + this->Id_Adresse_Livrer"'); ";
+	return "UPDATE [Client] SET Date_naissance = '" + this->Date_naissance + "', Date_premiere_commande = '" + this->Date_premiere_commande + "', Nom_client = '" + this->Nom_client + "', Prenom_client = '" + this->Prenom_client + "', Id_Adresse = '" + this->Id_Adresse + "',Id_Adresse_Livrer='" + this->Id_Adresse_Livrer+"' WHERE Numero_client = '" + this->Numero_client + "' ";
 }
 void Client::setNumeroClient(int ID)
 {

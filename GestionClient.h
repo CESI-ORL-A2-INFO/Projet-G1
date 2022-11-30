@@ -1,5 +1,5 @@
 #pragma once
-
+#include "ServiceClient.h"
 namespace ProjetPOO {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -35,9 +35,12 @@ namespace ProjetPOO {
 			}
 		}
 	private: System::Windows::Forms::DataGridView^ TableClient;
-	private: System::Windows::Forms::Button^ deleteClient;
-	private: System::Windows::Forms::Button^ updateClient;
-	private: System::Windows::Forms::Button^ inserClient;
+
+
+	private:
+
+
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
@@ -73,7 +76,14 @@ namespace ProjetPOO {
 		/// <summary>
 		/// Variable nécessaire au concepteur.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
+		NS_Serv::ServiceClient^ servClient;
+	private: System::Windows::Forms::Button^ DelClient;
+	private: System::Windows::Forms::Button^ UpdClient;
+	private: System::Windows::Forms::Button^ InsClient;
+
+
+		   System::Data::DataSet^ dataClient;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -83,9 +93,6 @@ namespace ProjetPOO {
 		void InitializeComponent(void)
 		{
 			this->TableClient = (gcnew System::Windows::Forms::DataGridView());
-			this->deleteClient = (gcnew System::Windows::Forms::Button());
-			this->updateClient = (gcnew System::Windows::Forms::Button());
-			this->inserClient = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label3 = (gcnew System::Windows::Forms::Label());
@@ -101,6 +108,9 @@ namespace ProjetPOO {
 			this->dateNaissance = (gcnew System::Windows::Forms::TextBox());
 			this->dateFirstCommande = (gcnew System::Windows::Forms::TextBox());
 			this->loadClient = (gcnew System::Windows::Forms::Button());
+			this->DelClient = (gcnew System::Windows::Forms::Button());
+			this->UpdClient = (gcnew System::Windows::Forms::Button());
+			this->InsClient = (gcnew System::Windows::Forms::Button());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->TableClient))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -114,54 +124,6 @@ namespace ProjetPOO {
 			this->TableClient->RowTemplate->Height = 24;
 			this->TableClient->Size = System::Drawing::Size(493, 585);
 			this->TableClient->TabIndex = 1;
-			// 
-			// deleteClient
-			// 
-			this->deleteClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->deleteClient->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->deleteClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->deleteClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->deleteClient->Location = System::Drawing::Point(0, 428);
-			this->deleteClient->Name = L"deleteClient";
-			this->deleteClient->Size = System::Drawing::Size(430, 54);
-			this->deleteClient->TabIndex = 6;
-			this->deleteClient->Text = L"Del";
-			this->deleteClient->UseVisualStyleBackColor = false;
-			// 
-			// updateClient
-			// 
-			this->updateClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->updateClient->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->updateClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->updateClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->updateClient->Location = System::Drawing::Point(0, 482);
-			this->updateClient->Name = L"updateClient";
-			this->updateClient->Size = System::Drawing::Size(430, 51);
-			this->updateClient->TabIndex = 5;
-			this->updateClient->Text = L"Upd";
-			this->updateClient->UseVisualStyleBackColor = false;
-			// 
-			// inserClient
-			// 
-			this->inserClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
-				static_cast<System::Int32>(static_cast<System::Byte>(66)));
-			this->inserClient->Dock = System::Windows::Forms::DockStyle::Bottom;
-			this->inserClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->inserClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
-				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->inserClient->Location = System::Drawing::Point(0, 533);
-			this->inserClient->Name = L"inserClient";
-			this->inserClient->Size = System::Drawing::Size(430, 52);
-			this->inserClient->TabIndex = 4;
-			this->inserClient->Text = L"Ins";
-			this->inserClient->UseVisualStyleBackColor = false;
 			// 
 			// label1
 			// 
@@ -258,6 +220,7 @@ namespace ProjetPOO {
 			// 
 			this->boxNumClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
 				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxNumClient->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->boxNumClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->boxNumClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -266,11 +229,13 @@ namespace ProjetPOO {
 			this->boxNumClient->Name = L"boxNumClient";
 			this->boxNumClient->Size = System::Drawing::Size(238, 22);
 			this->boxNumClient->TabIndex = 18;
+			this->boxNumClient->TextChanged += gcnew System::EventHandler(this, &GestionClient::boxNumClient_TextChanged);
 			// 
 			// boxNom
 			// 
 			this->boxNom->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
 				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxNom->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->boxNom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->boxNom->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -279,11 +244,13 @@ namespace ProjetPOO {
 			this->boxNom->Name = L"boxNom";
 			this->boxNom->Size = System::Drawing::Size(238, 22);
 			this->boxNom->TabIndex = 19;
+			this->boxNom->TextChanged += gcnew System::EventHandler(this, &GestionClient::boxNom_TextChanged);
 			// 
 			// boxPrenom
 			// 
 			this->boxPrenom->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
 				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxPrenom->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->boxPrenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->boxPrenom->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -297,6 +264,7 @@ namespace ProjetPOO {
 			// 
 			this->boxIDAdresseFact->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
 				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxIDAdresseFact->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->boxIDAdresseFact->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->boxIDAdresseFact->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -310,6 +278,7 @@ namespace ProjetPOO {
 			// 
 			this->boxIDAdresseLivraison->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)),
 				static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxIDAdresseLivraison->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->boxIDAdresseLivraison->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->boxIDAdresseLivraison->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)),
@@ -323,6 +292,7 @@ namespace ProjetPOO {
 			// 
 			this->dateNaissance->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
 				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->dateNaissance->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->dateNaissance->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->dateNaissance->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
@@ -336,6 +306,7 @@ namespace ProjetPOO {
 			// 
 			this->dateFirstCommande->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)),
 				static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->dateFirstCommande->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->dateFirstCommande->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->dateFirstCommande->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)),
@@ -350,17 +321,72 @@ namespace ProjetPOO {
 			this->loadClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
 				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->loadClient->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->loadClient->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->loadClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->loadClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->loadClient->Location = System::Drawing::Point(0, 374);
+			this->loadClient->Location = System::Drawing::Point(0, 531);
 			this->loadClient->Name = L"loadClient";
 			this->loadClient->Size = System::Drawing::Size(430, 54);
 			this->loadClient->TabIndex = 30;
 			this->loadClient->Text = L"Load";
-			this->loadClient->UseVisualStyleBackColor = false;
+			this->loadClient->UseVisualStyleBackColor = true;
 			this->loadClient->Click += gcnew System::EventHandler(this, &GestionClient::loadClient_Click);
+			// 
+			// DelClient
+			// 
+			this->DelClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+				static_cast<System::Int32>(static_cast<System::Byte>(66)));
+			this->DelClient->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->DelClient->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->DelClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->DelClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
+			this->DelClient->Location = System::Drawing::Point(0, 477);
+			this->DelClient->Name = L"DelClient";
+			this->DelClient->Size = System::Drawing::Size(430, 54);
+			this->DelClient->TabIndex = 31;
+			this->DelClient->Text = L"Delete";
+			this->DelClient->UseVisualStyleBackColor = false;
+			this->DelClient->Click += gcnew System::EventHandler(this, &GestionClient::DelClient_Click);
+			// 
+			// UpdClient
+			// 
+			this->UpdClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+				static_cast<System::Int32>(static_cast<System::Byte>(66)));
+			this->UpdClient->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->UpdClient->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->UpdClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->UpdClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
+			this->UpdClient->Location = System::Drawing::Point(0, 423);
+			this->UpdClient->Name = L"UpdClient";
+			this->UpdClient->Size = System::Drawing::Size(430, 54);
+			this->UpdClient->TabIndex = 32;
+			this->UpdClient->Text = L"Update";
+			this->UpdClient->UseVisualStyleBackColor = false;
+			this->UpdClient->Click += gcnew System::EventHandler(this, &GestionClient::UpdClient_Click);
+			// 
+			// InsClient
+			// 
+			this->InsClient->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+				static_cast<System::Int32>(static_cast<System::Byte>(66)));
+			this->InsClient->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->InsClient->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->InsClient->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->InsClient->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
+			this->InsClient->Location = System::Drawing::Point(0, 369);
+			this->InsClient->Name = L"InsClient";
+			this->InsClient->Size = System::Drawing::Size(430, 54);
+			this->InsClient->TabIndex = 33;
+			this->InsClient->Text = L"Insert";
+			this->InsClient->UseVisualStyleBackColor = false;
+			this->InsClient->Click += gcnew System::EventHandler(this, &GestionClient::InsClient_Click);
 			// 
 			// GestionClient
 			// 
@@ -369,6 +395,9 @@ namespace ProjetPOO {
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
 				static_cast<System::Int32>(static_cast<System::Byte>(44)));
 			this->ClientSize = System::Drawing::Size(923, 585);
+			this->Controls->Add(this->InsClient);
+			this->Controls->Add(this->UpdClient);
+			this->Controls->Add(this->DelClient);
 			this->Controls->Add(this->loadClient);
 			this->Controls->Add(this->dateFirstCommande);
 			this->Controls->Add(this->dateNaissance);
@@ -384,9 +413,6 @@ namespace ProjetPOO {
 			this->Controls->Add(this->label3);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
-			this->Controls->Add(this->deleteClient);
-			this->Controls->Add(this->updateClient);
-			this->Controls->Add(this->inserClient);
 			this->Controls->Add(this->TableClient);
 			this->Name = L"GestionClient";
 			this->Text = L"GestionClient";
@@ -398,14 +424,32 @@ namespace ProjetPOO {
 		}
 #pragma endregion
 	private: System::Void GestionClient_Load(System::Object^ sender, System::EventArgs^ e) {
-		
+		this->servClient = gcnew NS_Serv::ServiceClient();
 	}
 private: System::Void loadClient_Click(System::Object^ sender, System::EventArgs^ e) {
-	//this->TableClient->Refresh();
-	//this-> = this->;
-	//this-> = this->;
-	//this->TableClient->DataSource = this->;
-	//this->TableClient->DataMember = "Rsl";
+	this->TableClient->Refresh();
+	this->dataClient = this->servClient->selectAllClient("Rsl");
+	this->TableClient->DataSource = this->dataClient;
+	this->TableClient->DataMember = "Rsl";
+}
+private: System::Void deleteClient_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void inserClient_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void boxNom_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void updateClient_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void boxNumClient_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void DelClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->servClient->delClient(int::Parse(this->boxNumClient->Text));
+}
+private: System::Void UpdClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->servClient->udpdateClient(int::Parse(this->boxNumClient->Text), this->dateNaissance->Text, this->dateFirstCommande->Text, this->boxNom->Text, this->boxPrenom->Text, int::Parse(this->boxIDAdresseLivraison->Text), int::Parse(this->boxIDAdresseFact->Text));
+}
+private: System::Void InsClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->servClient->addClient(this->dateNaissance->Text, this->dateFirstCommande->Text, this->boxNom->Text, this->boxPrenom->Text, int::Parse(this->boxIDAdresseLivraison->Text), int::Parse(this->boxIDAdresseFact->Text));
 }
 };
 }
