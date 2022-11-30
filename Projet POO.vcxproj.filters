@@ -15,9 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MainWindow.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
+    
 
     <ClCompile Include="Cad.cpp">
       <Filter>Fichiers sources</Filter>
