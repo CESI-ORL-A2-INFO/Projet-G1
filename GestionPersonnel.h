@@ -105,45 +105,59 @@ namespace ProjetPOO {
 			// 
 			// inserPers
 			// 
+			this->inserPers->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->inserPers->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->inserPers->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->inserPers->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->inserPers->Location = System::Drawing::Point(0, 533);
 			this->inserPers->Name = L"inserPers";
 			this->inserPers->Size = System::Drawing::Size(430, 52);
 			this->inserPers->TabIndex = 1;
 			this->inserPers->Text = L"Ins";
-			this->inserPers->UseVisualStyleBackColor = true;
+			this->inserPers->UseVisualStyleBackColor = false;
 			// 
 			// updatePersonnel
 			// 
+			this->updatePersonnel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->updatePersonnel->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->updatePersonnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->updatePersonnel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->updatePersonnel->Location = System::Drawing::Point(0, 482);
 			this->updatePersonnel->Name = L"updatePersonnel";
 			this->updatePersonnel->Size = System::Drawing::Size(430, 51);
 			this->updatePersonnel->TabIndex = 2;
 			this->updatePersonnel->Text = L"Upd";
-			this->updatePersonnel->UseVisualStyleBackColor = true;
+			this->updatePersonnel->UseVisualStyleBackColor = false;
 			// 
 			// deletePersonnel
 			// 
+			this->deletePersonnel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->deletePersonnel->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->deletePersonnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->deletePersonnel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->deletePersonnel->Location = System::Drawing::Point(0, 428);
 			this->deletePersonnel->Name = L"deletePersonnel";
 			this->deletePersonnel->Size = System::Drawing::Size(430, 54);
 			this->deletePersonnel->TabIndex = 3;
 			this->deletePersonnel->Text = L"Del";
-			this->deletePersonnel->UseVisualStyleBackColor = true;
+			this->deletePersonnel->UseVisualStyleBackColor = false;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.1F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->label1->Location = System::Drawing::Point(14, 22);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(36, 20);
@@ -155,6 +169,8 @@ namespace ProjetPOO {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.1F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->label2->Location = System::Drawing::Point(14, 63);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(54, 20);
@@ -166,6 +182,8 @@ namespace ProjetPOO {
 			this->label3->AutoSize = true;
 			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.1F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->label3->Location = System::Drawing::Point(14, 106);
 			this->label3->Name = L"label3";
 			this->label3->Size = System::Drawing::Size(77, 20);
@@ -177,6 +195,8 @@ namespace ProjetPOO {
 			this->label4->AutoSize = true;
 			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.1F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->label4->Location = System::Drawing::Point(14, 149);
 			this->label4->Name = L"label4";
 			this->label4->Size = System::Drawing::Size(63, 20);
@@ -188,6 +208,8 @@ namespace ProjetPOO {
 			this->label5->AutoSize = true;
 			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.1F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->label5->Location = System::Drawing::Point(14, 194);
 			this->label5->Name = L"label5";
 			this->label5->Size = System::Drawing::Size(139, 20);
@@ -199,6 +221,8 @@ namespace ProjetPOO {
 			this->label6->AutoSize = true;
 			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.1F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->label6->Location = System::Drawing::Point(14, 235);
 			this->label6->Name = L"label6";
 			this->label6->Size = System::Drawing::Size(103, 20);
@@ -210,6 +234,8 @@ namespace ProjetPOO {
 			this->label7->AutoSize = true;
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.1F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->label7->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->label7->Location = System::Drawing::Point(14, 279);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(113, 20);
@@ -218,6 +244,12 @@ namespace ProjetPOO {
 			// 
 			// boxAdresse
 			// 
+			this->boxAdresse->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
+				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxAdresse->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->boxAdresse->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->boxAdresse->Location = System::Drawing::Point(159, 235);
 			this->boxAdresse->Name = L"boxAdresse";
 			this->boxAdresse->Size = System::Drawing::Size(238, 22);
@@ -225,6 +257,12 @@ namespace ProjetPOO {
 			// 
 			// boxSuperieur
 			// 
+			this->boxSuperieur->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
+				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxSuperieur->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->boxSuperieur->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->boxSuperieur->Location = System::Drawing::Point(159, 279);
 			this->boxSuperieur->Name = L"boxSuperieur";
 			this->boxSuperieur->Size = System::Drawing::Size(238, 22);
@@ -232,6 +270,12 @@ namespace ProjetPOO {
 			// 
 			// boxStatut
 			// 
+			this->boxStatut->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
+				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxStatut->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->boxStatut->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->boxStatut->Location = System::Drawing::Point(159, 149);
 			this->boxStatut->Name = L"boxStatut";
 			this->boxStatut->Size = System::Drawing::Size(238, 22);
@@ -239,6 +283,12 @@ namespace ProjetPOO {
 			// 
 			// boxPrenom
 			// 
+			this->boxPrenom->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
+				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxPrenom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->boxPrenom->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->boxPrenom->Location = System::Drawing::Point(159, 106);
 			this->boxPrenom->Name = L"boxPrenom";
 			this->boxPrenom->Size = System::Drawing::Size(238, 22);
@@ -246,6 +296,12 @@ namespace ProjetPOO {
 			// 
 			// boxNom
 			// 
+			this->boxNom->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
+				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxNom->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->boxNom->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->boxNom->Location = System::Drawing::Point(159, 63);
 			this->boxNom->Name = L"boxNom";
 			this->boxNom->Size = System::Drawing::Size(238, 22);
@@ -253,6 +309,12 @@ namespace ProjetPOO {
 			// 
 			// boxID
 			// 
+			this->boxID->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
+				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->boxID->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->boxID->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->boxID->Location = System::Drawing::Point(159, 22);
 			this->boxID->Name = L"boxID";
 			this->boxID->Size = System::Drawing::Size(238, 22);
@@ -260,6 +322,12 @@ namespace ProjetPOO {
 			// 
 			// dateEmbauche
 			// 
+			this->dateEmbauche->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)), static_cast<System::Int32>(static_cast<System::Byte>(85)),
+				static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			this->dateEmbauche->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->dateEmbauche->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->dateEmbauche->Location = System::Drawing::Point(159, 194);
 			this->dateEmbauche->Name = L"dateEmbauche";
 			this->dateEmbauche->Size = System::Drawing::Size(238, 22);
@@ -267,20 +335,26 @@ namespace ProjetPOO {
 			// 
 			// loadPersonnel
 			// 
+			this->loadPersonnel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+				static_cast<System::Int32>(static_cast<System::Byte>(66)));
 			this->loadPersonnel->Dock = System::Windows::Forms::DockStyle::Bottom;
 			this->loadPersonnel->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12.12F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->loadPersonnel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->loadPersonnel->Location = System::Drawing::Point(0, 374);
 			this->loadPersonnel->Name = L"loadPersonnel";
 			this->loadPersonnel->Size = System::Drawing::Size(430, 54);
 			this->loadPersonnel->TabIndex = 30;
 			this->loadPersonnel->Text = L"Load";
-			this->loadPersonnel->UseVisualStyleBackColor = true;
+			this->loadPersonnel->UseVisualStyleBackColor = false;
 			// 
 			// GestionPersonnel
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
+				static_cast<System::Int32>(static_cast<System::Byte>(44)));
 			this->ClientSize = System::Drawing::Size(923, 585);
 			this->Controls->Add(this->loadPersonnel);
 			this->Controls->Add(this->dateEmbauche);
