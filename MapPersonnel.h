@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class MapPersonnel {
+class Personnel {
 private:
 	int IDPersonnel;
 	int IDSuperieur;
@@ -19,9 +19,9 @@ public:
 	string Delete(void);
 	string Update(void);
 
-	void SetIDPersonnel(int);
+	void setIDPersonnel(int);
 	void setIDSuperieur(int);
-	void SetDateEmbauche(int);
+	void setDateEmbauche(int);
 	void setNom(string);
 	void setPrenom(string);
 	void setStatut(string);
