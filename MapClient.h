@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class MapClient {
+class Client {
 private:
 	int NumeroClient;
 	int AdresseLivraison;
@@ -32,6 +32,6 @@ public:
 	int getAdressePaiement(void);
 	string getDateDeNaissance(void);
 	string getDatePremiereCommande(void);
-	string NomClient(void);
-	string PrenomClient(void);
+	string getNomClient(void);
+	string getPrenomClient(void);
 };

@@ -124,6 +124,7 @@
     <ClCompile Include="Cad.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="MapAdresse.cpp" />
+    <ClCompile Include="MapClient.cpp" />
     <ClCompile Include="MapPersonnel.cpp" />
   </ItemGroup>
   <ItemGroup>
