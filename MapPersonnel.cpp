@@ -1,76 +1,74 @@
 #include "MapPersonnel.h"
-#include <string>
-using namespace std;
 
-string Personnel::Select(void)
+System::String^ Personnel::Select(void)
 {
-	return "SELECT [IDPersonnel], [IDSuperieur], [DateEmbauche], [Nom], [Prenom], [Statut], [Adresse] FROM Personnel";
+	return "SELECT [Id_Personnel], [Id_Superieur], [Date_Embauche], [Nom_Personnel], [Prenom_Personnel], [Statut], [Id_Adresse] FROM Personnel";
 }
-string Personnel::Insert(void)
+System::String^ Personnel::Insert(void)
 {
-	return "INSERT INTO Personnel (IDPersonnel, IDSuperieur, DateEmbauche, Nom, Prenom, Statut, Adresse) VALUES('" + this->IDPersonnel + "', '" + this->IDSuperieur + "', '" + this->DateEmbauche + "','" + this->Nom + "','" + this->Prenom + "','" + this->Statut + "','" + this->Adresse +"'); ";
+	return "INSERT INTO Personnel (Id_Personnel, IDSuperieur, Date_Embauche, Nom_Personnel, Prenom_Personnel, Statut, Id_Adresse) VALUES('" + this->Id_Personnel + "', '" + this->Id_Superieur + "', '" + this->Date_Embauche + "','" + this->Nom_Personnel + "','" + this->Prenom_Personnel + "','" + this->Statut + "','" + this->Id_Adresse +"'); ";
 }
-string Personnel::Delete(void)
+System::String^ Personnel::Delete(void)
 {
-	return "DELETE FROM Personnel WHERE Personnel.IDPersonnel VALUES('" + this->IDPersonnel + "')";
+	return "DELETE FROM Personnel WHERE Personnel.Id_Personnel VALUES('" + this->Id_Personnel + "')";
 }
-string Personnel::Update(void)
+System::String^ Personnel::Update(void)
 {
-	return "UPDATE Personnel SET IDPersonnel = '" + this->IDPersonnel + "', IDSuperieur = '" + this->IDSuperieur + "', DateEmbauche = '" + this->DateEmbauche + "', Nom = '" + this->Nom + "', Prenom = '" + this->Prenom + "', Statut = '" + this->Statut + "', Adresse = '" + this->Adresse + "'); ";
+	return "UPDATE Personnel SET Id_Personnel = '" + this->Id_Personnel + "', Id_Superieur = '" + this->Id_Superieur + "', Date_Embauche = '" + this->Date_Embauche + "', Nom_Personnel = '" + this->Nom_Personnel + "', Prenom_Personnel = '" + this->Prenom_Personnel + "', Statut = '" + this->Statut + "', Id_Adresse = '" + this->Id_Adresse + "'); ";
 }
 void Personnel::setIDPersonnel(int ID)
 {
-	this->IDPersonnel = ID;
+	this->Id_Personnel = ID;
 }
 void Personnel::setIDSuperieur(int IDSup)
 {
-	this->IDSuperieur = IDSup;
+	this->Id_Superieur = IDSup;
 }
 void Personnel::setDateEmbauche(int Embauche)
 {
-	this->DateEmbauche = Embauche;
+	this->Date_Embauche = Embauche;
 }
-void Personnel::setNom(string nom)
+void Personnel::setNom(System::String^ nom)
 {
-	this->Nom = nom;
+	this->Nom_Personnel = nom;
 }
-void Personnel::setPrenom(string prenom)
+void Personnel::setPrenom(System::String^ prenom)
 {
-	this->Prenom = prenom;
+	this->Prenom_Personnel = prenom;
 }
-void Personnel::setStatut(string statut)
+void Personnel::setStatut(System::String^ statut)
 {
 	this->Statut = statut;
 }
 void Personnel::setAdresse(int adresse)
 {
-	this->Adresse = adresse;
+	this->Id_Adresse = adresse;
 }
 int Personnel::getID(void)
 {
-	return this->IDPersonnel;
+	return this->Id_Personnel;
 }
 int Personnel::getIDSuperieur(void)
 {
-	return this->IDSuperieur;
+	return this->Id_Superieur;
 }
 int Personnel::getDateEmbauche(void)
 {
-	return this->DateEmbauche;
+	return this->Date_Embauche;
 }
-string Personnel::getNom(void)
+System::String^ Personnel::getNom(void)
 {
-	return this->Nom;
+	return this->Nom_Personnel;
 }
-string Personnel::getPrenom(void)
+System::String^ Personnel::getPrenom(void)
 {
-	return this->Prenom;
+	return this->Prenom_Personnel;
 }
-string Personnel::getStatut(void)
+System::String^ Personnel::getStatut(void)
 {
 	return this->Statut;
 }
 int Personnel::getAdresse(void)
 {
-	return this->Adresse;
+	return this->Id_Adresse;
 }

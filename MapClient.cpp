@@ -1,76 +1,74 @@
 #include "MapClient.h"
-#include <string>
-using namespace std;
 
-string Client::Select(void)
+System::String^ Client::Select(void)
 {
-	return "SELECT [NumeroClient], [AdresseLivraison], [AdressePaiement], [DateDeNaissance], [DatePremiereCommande], [NomClient], [PrenomClient] FROM Client";
+	return "SELECT [Numero_client], [Date_naissance], [Date_premiere_commande], [Nom_client], [Prenom_client], [Id_Adresse], [Id_Adresse_Livrer] FROM Client";
 }
-string Client::Insert(void)
+System::String^ Client::Insert(void)
 {
-	return "INSERT INTO Client (NumeroClient, AdresseLivraison, AdressePaiement, DateDeNaissance, DatePremiereCommande, NomClient, PrenomClient) VALUES('" + this->NumeroClient + "', '" + this->AdresseLivraison + "', '" + this->AdressePaiement + "','" + this->DateDeNaissance + "','" + this->DatePremiereCommande + "','" + this->NomClient + "','" + this->PrenomClient + "'); ";
+	return "INSERT INTO Client (Numero_client, Date_naissance, Date_premiere_commande, Nom_client, Prenom_client, Id_Adresse, Id_Adresse_Livrer) VALUES('" + this->Numero_client + "', '" + this->Date_naissance + "','" + this->Date_premiere_commande + "','" + this->Nom_client + "','" + this->Prenom_client + "','" + this->Id_Adresse + "','" + this->Id_Adresse_Livrer +"'); ";
 }
-string Client::Delete(void)
+System::String^ Client::Delete(void)
 {
-	return "DELETE FROM Client WHERE Client.NumeroClient VALUES('" + this->NumeroClient + "')";
+	return "DELETE FROM Client WHERE Client.Numero_client VALUES('" + this->Numero_client + "')";
 }
-string Client::Update(void)
+System::String^ Client::Update(void)
 {
-	return "UPDATE Client SET NumeroClient = '" + this->NumeroClient + "', AdresseLivraison = '" + this->AdresseLivraison + "', AdressePaiement = '" + this->AdressePaiement + "', DateDeNaissance = '" + this->DateDeNaissance + "', DatePremiereCommande = '" + this->DatePremiereCommande + "', NomClient = '" + this->NomClient + "', PrenomClient = '" + this->PrenomClient + "'); ";
+	return "UPDATE Client SET Numero_client = '" + this->Numero_client + "', Date_naissance = '" + this->Date_naissance + "', Date_premiere_commande = '" + this->Date_premiere_commande + "', Nom_client = '" + this->Nom_client + "', Prenom_client = '" + this->Prenom_client + "', Id_Adresse = '" + this->Id_Adresse + "','" + this->Id_Adresse_Livrer"'); ";
 }
 void Client::setNumeroClient(int ID)
 {
-	this->NumeroClient = ID;
+	this->Numero_client = ID;
+}
+void Client::setDateDeNaissance(System::String^ naissance)
+{
+	this->Date_naissance = naissance;
+}
+void Client::setDatePremiereCommande(System::String^ premcom)
+{
+	this->Date_premiere_commande = premcom;
+}
+void Client::setNomClient(System::String^ nom)
+{
+	this->Nom_client = nom;
+}
+void Client::setPrenomClient(System::String^ prenom)
+{
+	this->Prenom_client = prenom;
 }
 void Client::setAdresseLivraison(int AdLiv)
 {
-	this->AdresseLivraison = AdLiv;
+	this->Id_Adresse_Livrer = AdLiv;
 }
 void Client::setAdressePaiement(int AdPaie)
 {
-	this->AdressePaiement = AdPaie;
-}
-void Client::setDateDeNaissance(string naissance)
-{
-	this->DateDeNaissance = naissance;
-}
-void Client::setDatePremiereCommande(string premcom)
-{
-	this->DatePremiereCommande = premcom;
-}
-void Client::setNomClient(string nom)
-{
-	this->NomClient = nom;
-}
-void Client::setPrenomClient(string prenom)
-{
-	this->PrenomClient = prenom;
+	this->Id_Adresse = AdPaie;
 }
 int Client::getNumeroClient(void)
 {
-	return this->NumeroClient;
+	return this->Numero_client;
 }
-int Client::getAdresseLivraison(void)
+System::String^ Client::getDateDeNaissance(void)
 {
-	return this->AdresseLivraison;
+	return this->Date_naissance;
+}
+System::String^ Client::getDatePremiereCommande(void)
+{
+	return this->Date_premiere_commande;
+}
+System::String^ Client::getNomClient(void)
+{
+	return this->Nom_client;
+}
+System::String^ Client::getPrenomClient(void)
+{
+	return this->Prenom_client;
+}
+int Client::getAdresseLivraison(void) 
+{
+	return this->Id_Adresse_Livrer;
 }
 int Client::getAdressePaiement(void)
 {
-	return this->AdressePaiement;
-}
-string Client::getDateDeNaissance(void)
-{
-	return this->DateDeNaissance;
-}
-string Client::getDatePremiereCommande(void)
-{
-	return this->DatePremiereCommande;
-}
-string Client::getNomClient(void)
-{
-	return this->NomClient;
-}
-string Client::getPrenomClient(void)
-{
-	return this->PrenomClient;
+	return this->Id_Adresse;
 }
