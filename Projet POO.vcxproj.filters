@@ -33,10 +33,20 @@
     <ClCompile Include="AffichageStat.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+
     <ClCompile Include="ServiceCommande.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="ServiceClient.cpp">
+
+    <ClCompile Include="MapCommande.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MapFacture.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MapArticle.cpp">
+
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,10 +69,20 @@
     <ClInclude Include="AffichageStat.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+
     <ClInclude Include="ServiceCommande.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="ServiceClient.h">
+
+    <ClInclude Include="MapCommande.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="MapFacture.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="MapArticle.h">
+
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

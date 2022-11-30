@@ -128,8 +128,14 @@
     <ClCompile Include="GestionPersonnel.cpp" />
     <ClCompile Include="GestionStock.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+
     <ClCompile Include="ServiceClient.cpp" />
     <ClCompile Include="ServiceCommande.cpp" />
+
+    <ClCompile Include="MapArticle.cpp" />
+    <ClCompile Include="MapCommande.cpp" />
+    <ClCompile Include="MapFacture.cpp" />
+
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AffichageStat.h">
@@ -150,12 +156,27 @@
     <ClInclude Include="MainWindow.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+
     <ClInclude Include="ServiceClient.h" />
     <ClInclude Include="ServiceCommande.h" />
+
+    <ClInclude Include="MapArticle.h" />
+    <ClInclude Include="MapCommande.h" />
+    <ClInclude Include="MapFacture.h" />
+
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GestionClient.resx">
+      <DependentUpon>GestionClient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionCommande.resx">
+      <DependentUpon>GestionCommande.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionPersonnel.resx">
       <DependentUpon>GestionPersonnel.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionStock.resx">
+      <DependentUpon>GestionStock.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.h</DependentUpon>
