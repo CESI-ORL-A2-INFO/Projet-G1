@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class Adress {
+class Adresse {
 private:
 	int IDAdresse;
 	int NumeroRue;

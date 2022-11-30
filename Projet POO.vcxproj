@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="Cad.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="MapAdresse.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cad.h" />

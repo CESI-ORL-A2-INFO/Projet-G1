@@ -1,7 +1,6 @@
 #pragma once
 
-namespace NS_Comp_Data {
-	class Cad {
+class Cad {
 	public:
 		System::String^ sSql;
 		System::String^ sCnx;
@@ -11,4 +10,3 @@ namespace NS_Comp_Data {
 		System::Data::DataSet^ getRows(System::String^, System::String^);
 		void actionRows(System::String^);
 	};
-}
