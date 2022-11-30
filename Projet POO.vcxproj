@@ -126,16 +126,12 @@
   <ItemGroup>
 
     <ClCompile Include="Cad.cpp" />
-    <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="MapAdresse.cpp" />
     <ClCompile Include="MapClient.cpp" />
     <ClCompile Include="MapPersonnel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cad.h" />
-    <ClInclude Include="MainWindow.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="MapAdresse.h" />
     <ClInclude Include="MapClient.h" />
     <ClInclude Include="MapPersonnel.h" />
