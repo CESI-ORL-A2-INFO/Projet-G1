@@ -14,6 +14,7 @@ namespace NS_Comp {
 		System::String^ Insert(void);
 		System::String^ Delete(void);
 		System::String^ Update(void);
+		System::String^ SelectWithID();
 
 		void setIDAdresse(int);
 		void setNumeroRue(int);

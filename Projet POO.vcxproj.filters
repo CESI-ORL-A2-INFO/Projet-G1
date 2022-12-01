@@ -18,7 +18,6 @@
     <ClCompile Include="MainWindow.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-
     <ClCompile Include="Cad.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -29,7 +28,7 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="MapClient.cpp">
-		<Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="GestionPersonnel.cpp">
       <Filter>Fichiers sources</Filter>
@@ -46,12 +45,11 @@
     <ClCompile Include="AffichageStat.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-
     <ClCompile Include="ServiceCommande.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="ServiceClient.cpp">
-		<Filter>Fichiers sources</Filter>
+      <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="MapCommande.cpp">
       <Filter>Fichiers sources</Filter>
@@ -60,8 +58,15 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="MapArticle.cpp">
-
-
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="GestionAdress.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ServiceAdresse.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ServicePersonnel.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -69,7 +74,6 @@
     <ClInclude Include="MainWindow.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-
     <ClInclude Include="Cad.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -80,7 +84,7 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="MapClient.h">
-		<Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="GestionPersonnel.h">
       <Filter>Fichiers d%27en-tête</Filter>
@@ -97,12 +101,11 @@
     <ClInclude Include="AffichageStat.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-
     <ClInclude Include="ServiceCommande.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="ServiceClient.h">
-		<Filter>Fichiers d%27en-tête</Filter>
+      <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="MapCommande.h">
       <Filter>Fichiers d%27en-tête</Filter>
@@ -111,8 +114,15 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="MapArticle.h">
-
-
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="GestionAdress.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceAdresse.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="ServicePersonnel.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

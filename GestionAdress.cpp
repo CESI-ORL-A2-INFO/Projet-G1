@@ -1,14 +1,14 @@
-#include "GestionPersonnel.h"
+#include "GestionAdress.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
 
 
 [STAThreadAttribute]
-void MainPers(array<String^>^ args)
+void MainAdresse(array<String^>^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	ProjetPOO::GestionPersonnel monFormulaire4;
-	Application::Run(% monFormulaire4);
+	ProjetPOO::GestionAdress monFormulaire3;
+	Application::Run(% monFormulaire3);
 }

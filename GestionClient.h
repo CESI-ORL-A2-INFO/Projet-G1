@@ -1,5 +1,6 @@
 #pragma once
 #include "ServiceClient.h"
+#include "GestionAdress.h"
 namespace ProjetPOO {
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -78,12 +79,14 @@ namespace ProjetPOO {
 		/// </summary>
 		System::ComponentModel::Container^ components;
 		NS_Serv::ServiceClient^ servClient;
+		GestionAdress^ gestAdress;
 	private: System::Windows::Forms::Button^ DelClient;
 	private: System::Windows::Forms::Button^ UpdClient;
 	private: System::Windows::Forms::Button^ InsClient;
 
 
 		   System::Data::DataSet^ dataClient;
+		   System::Data::DataSet^ dataUnClient;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -92,6 +95,7 @@ namespace ProjetPOO {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->TableClient = (gcnew System::Windows::Forms::DataGridView());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -116,8 +120,24 @@ namespace ProjetPOO {
 			// 
 			// TableClient
 			// 
+			this->TableClient->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)),
+				static_cast<System::Int32>(static_cast<System::Byte>(22)), static_cast<System::Int32>(static_cast<System::Byte>(44)));
 			this->TableClient->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+				static_cast<System::Int32>(static_cast<System::Byte>(66)));
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)),
+				static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->TableClient->DefaultCellStyle = dataGridViewCellStyle1;
 			this->TableClient->Dock = System::Windows::Forms::DockStyle::Right;
+			this->TableClient->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
+				static_cast<System::Int32>(static_cast<System::Byte>(44)));
 			this->TableClient->Location = System::Drawing::Point(430, 0);
 			this->TableClient->Name = L"TableClient";
 			this->TableClient->RowHeadersWidth = 51;
@@ -431,6 +451,7 @@ private: System::Void loadClient_Click(System::Object^ sender, System::EventArgs
 	this->dataClient = this->servClient->selectAllClient("Rsl");
 	this->TableClient->DataSource = this->dataClient;
 	this->TableClient->DataMember = "Rsl";
+
 }
 private: System::Void deleteClient_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -441,15 +462,43 @@ private: System::Void boxNom_TextChanged(System::Object^ sender, System::EventAr
 private: System::Void updateClient_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void boxNumClient_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (!this->boxNumClient->Text->Equals("")) {
+		this->dataUnClient = this->servClient->selectClientWithID("Client", int::Parse(this->boxNumClient->Text));
+		System::Data::DataTableReader^ reader;
+		reader = this->dataUnClient->CreateDataReader();
+		reader->Read();
+		this->boxNom->Text = reader->GetValue(1)->ToString();
+		this->boxPrenom->Text = reader->GetValue(2)->ToString();
+		this->dateNaissance->Text = reader->GetValue(3)->ToString();
+		this->dateFirstCommande->Text = reader->GetValue(4)->ToString();
+		this->boxIDAdresseFact->Text = reader->GetValue(5)->ToString();
+		this->boxIDAdresseLivraison->Text = reader->GetValue(6)->ToString();
+	}
+	this->TableClient->Refresh();
+	this->dataClient = this->servClient->selectAllClient("Rsl");
+	this->TableClient->DataSource = this->dataClient;
+	this->TableClient->DataMember = "Rsl";
 }
 private: System::Void DelClient_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->servClient->delClient(int::Parse(this->boxNumClient->Text));
 }
 private: System::Void UpdClient_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->servClient->udpdateClient(int::Parse(this->boxNumClient->Text), this->dateNaissance->Text, this->dateFirstCommande->Text, this->boxNom->Text, this->boxPrenom->Text, int::Parse(this->boxIDAdresseLivraison->Text), int::Parse(this->boxIDAdresseFact->Text));
+	if (this->boxIDAdresseFact->Text->IsNullOrWhiteSpace("") || this->boxIDAdresseLivraison->Text->IsNullOrWhiteSpace("")) { //Vérifie si les 2 ID adresses sont rentrés.
+		gestAdress = gcnew GestionAdress();// Ouvre la fenêtre de gestion des Adresses.
+		gestAdress->Show();
+	}
+	else {
+		this->servClient->udpdateClient(int::Parse(this->boxNumClient->Text), this->dateNaissance->Text, this->dateFirstCommande->Text, this->boxNom->Text, this->boxPrenom->Text, int::Parse(this->boxIDAdresseLivraison->Text), int::Parse(this->boxIDAdresseFact->Text));
+	}
 }
 private: System::Void InsClient_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->servClient->addClient(this->dateNaissance->Text, this->dateFirstCommande->Text, this->boxNom->Text, this->boxPrenom->Text, int::Parse(this->boxIDAdresseLivraison->Text), int::Parse(this->boxIDAdresseFact->Text));
+	if (this->boxIDAdresseFact->Text->IsNullOrWhiteSpace("") || this->boxIDAdresseLivraison->Text->IsNullOrWhiteSpace("")) { //Vérifie si les 2 ID adresses sont rentrés.
+		gestAdress = gcnew GestionAdress();// Ouvre la fenêtre de gestion des Adresses.
+		gestAdress->Show();
+	}
+	else {
+		this->servClient->addClient(this->dateNaissance->Text, this->dateFirstCommande->Text, this->boxNom->Text, this->boxPrenom->Text, int::Parse(this->boxIDAdresseLivraison->Text), int::Parse(this->boxIDAdresseFact->Text));
+	}
 }
 };
 }

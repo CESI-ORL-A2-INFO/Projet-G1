@@ -93,9 +93,7 @@
     <Link>
       <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
-
       <EntryPointSymbol>WinMain</EntryPointSymbol>
-
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -124,32 +122,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
     <ClCompile Include="Cad.cpp" />
+    <ClCompile Include="GestionAdress.cpp" />
     <ClCompile Include="MapAdresse.cpp" />
     <ClCompile Include="MapClient.cpp" />
     <ClCompile Include="MapPersonnel.cpp" />
+    <ClCompile Include="ServicePersonnel.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cad.h" />
+    <ClInclude Include="GestionAdress.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MapAdresse.h" />
     <ClInclude Include="MapClient.h" />
     <ClInclude Include="MapPersonnel.h" />
-
     <ClCompile Include="AffichageStat.cpp" />
     <ClCompile Include="GestionClient.cpp" />
     <ClCompile Include="GestionCommande.cpp" />
     <ClCompile Include="GestionPersonnel.cpp" />
     <ClCompile Include="GestionStock.cpp" />
     <ClCompile Include="MainWindow.cpp" />
-
+    <ClCompile Include="ServiceAdresse.cpp" />
     <ClCompile Include="ServiceClient.cpp" />
     <ClCompile Include="ServiceCommande.cpp" />
-
     <ClCompile Include="MapArticle.cpp" />
     <ClCompile Include="MapCommande.cpp" />
     <ClCompile Include="MapFacture.cpp" />
-
+    <ClInclude Include="ServicePersonnel.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AffichageStat.h">
@@ -170,17 +170,17 @@
     <ClInclude Include="MainWindow.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-
+    <ClInclude Include="ServiceAdresse.h" />
     <ClInclude Include="ServiceClient.h" />
     <ClInclude Include="ServiceCommande.h" />
-
     <ClInclude Include="MapArticle.h" />
     <ClInclude Include="MapCommande.h" />
     <ClInclude Include="MapFacture.h" />
-
-
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="GestionAdress.resx">
+      <DependentUpon>GestionAdress.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionClient.resx">
       <DependentUpon>GestionClient.h</DependentUpon>
     </EmbeddedResource>

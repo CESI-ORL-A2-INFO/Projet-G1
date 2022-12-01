@@ -2,21 +2,25 @@
 
 using namespace NS_Comp;
 
+
+System::String^ Adresse::SelectWithID() {
+	return "SELECT * FROM [Adresse] WHERE Id_Adresse = '" + this->IDAdresse + "'";
+}
 System::String^ Adresse::Select(void)
 {
 	return "SELECT [Id_Adresse], [Numero_Rue], [Code_Postal], [Nom_rue], [Ville], [Type_Rue] FROM Adresse";
 }
 System::String^ Adresse::Insert(void)
 {
-	return "INSERT INTO Adresse (Id_Adresse, Numero_Rue, Code_Postal, Nom_rue, Ville, Type_Rue) VALUES('" + this->IDAdresse + "', '" + this->NumeroRue + "', '" + this->CodePostal + "','" + this->NomRue + "','" + this->Ville + "','" + this->TypeRue +"'); ";
+	return "INSERT INTO Adresse (Numero_Rue, Code_Postal, Nom_rue, Ville, Type_Rue) VALUES('" + this->NumeroRue + "', '" + this->CodePostal + "','" + this->NomRue + "','" + this->Ville + "','" + this->TypeRue +"'); ";
 }
 System::String^ Adresse::Delete(void)
 {
-	return "DELETE FROM Adresse WHERE Adresse.Id_Adresse VALUES('" + this->IDAdresse + "')";
+	return "DELETE FROM Adresse WHERE Id_Adresse ='" + this->IDAdresse + "'";
 }
 System::String^ Adresse::Update(void)
 {
-	return "UPDATE Adresse SET Id_Adresse = '" + this->IDAdresse + "', NumeroRue = '" + this->NumeroRue + "', CodePostal = '" + this->CodePostal + "', NomRue = '" + this->NomRue + "', Ville = '" + this->Ville + "', TypeRue = '" + this->TypeRue+"'); ";
+	return "UPDATE Adresse SET Numero_Rue = '" + this->NumeroRue + "', Code_Postal = '" + this->CodePostal + "', Nom_rue = '" + this->NomRue + "', Ville = '" + this->Ville + "', Type_Rue = '" + this->TypeRue + "' WHERE Id_Adresse = '" + this->IDAdresse + "'";
 }
 void Adresse::setIDAdresse(int ID)
 {

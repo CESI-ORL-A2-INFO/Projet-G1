@@ -61,12 +61,21 @@ System::Data::DataSet^ ServiceClient::selectAllClient(System::String^ nom_table)
 	return this->clientCad->getRows(sql, nom_table);
 }
 
-//DataSet ServiceClient::selectClient(System::String^ nom_table, int numero_Client) {
-//
-//	System::String^ sql;
-//
-//	sql = this->mapClient->Select();
-//
-//	return this->clientCad->getRows(sql, nom_table);
-//}
+void ServiceClient::updClientForAdress(int idA) {
+
+	System::String^ sql;
+	this->mapClient->setAdressePaiement(idA);
+	this->mapClient->setAdresseLivraison(idA);
+	sql = this->mapClient->UpdForAdress();
+
+	this->clientCad->actionRows(sql);
+}
+
+System::Data::DataSet^ ServiceClient::selectClientWithID(System::String^ nomTable, int id) {
+	System::String^ sql;
+	this->mapClient->setNumeroClient(id);
+	sql = this->mapClient->SelectWithID();
+	return this->clientCad->getRows(sql, nomTable);
+}
+
 

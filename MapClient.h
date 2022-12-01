@@ -16,6 +16,8 @@ namespace NS_Comp {
 		System::String^ Insert();
 		System::String^ Delete();
 		System::String^ Update();
+		System::String^ UpdForAdress();
+		System::String^ SelectWithID();
 
 		void setNumeroClient(int);
 		void setAdresseLivraison(int);
