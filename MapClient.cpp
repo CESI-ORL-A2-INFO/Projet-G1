@@ -2,6 +2,12 @@
 
 using namespace NS_Comp;
 
+System::String^ Client::SelectWithID() {
+	return "SELECT * FROM Client WHERE Numero_client = '" + this->Numero_client + "'";
+}
+System::String^ Client::UpdForAdress() {
+	return "UPDATE [Client] SET [Id_Adresse] = 1, [Id_Adresse_Livrer] = 1 WHERE [Id_Adresse] = " + this->Id_Adresse + " OR [Id_Adresse_Livrer] = " + this->Id_Adresse_Livrer + "";
+}
 System::String^ Client::Select()
 {
 	return "SELECT * FROM [Client]";
