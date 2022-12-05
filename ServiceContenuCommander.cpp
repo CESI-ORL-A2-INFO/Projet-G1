@@ -33,11 +33,12 @@ void ServiceContenuCommander::updateContCommande(System::String^ ref, int idArti
 	contCad->actionRows(sql);
 }
 
-void ServiceContenuCommander::deleteContCommande(System::String^ ref) {
+void ServiceContenuCommander::deleteContCommande(System::String^ ref, int idArt) {
 
 	System::String^ sql;
 
 	mapCont->setRef(ref);
+	mapCont->setIdArticle(idArt);
 
 	sql = mapCont->Delete();
 
