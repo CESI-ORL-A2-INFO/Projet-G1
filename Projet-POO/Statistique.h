@@ -1,22 +1,29 @@
 #pragma once
-class Statistique
+
+#include "Cad.h"
+namespace CLStatistique
 {
-private:
-	servClient : ServiceClient; 
-	servArticle : ServiceArticle;
-	servCatalogue : ServiceCommande;
-	servCom : ServiceCommande;
-	servFact : ServiceFacture;
-public:
-	float panierMoy();
-	float chiffreAffairesMens();
-	array <String> reapprovisionnement();
-	float achatClientTot();
-	array <String> plusVendu();
-	array <String> moinsVendu();
-	float valComStock();
-	float valAchatStock();
-	float simulationVarCom();
+	class Statistique
+	{
+	private:
+		NS_Comp_Data::Cad statCad;
+		System::String^ TVA;
+		System::String^ margeCommerciale;
+		System::String^ remiseCommerciale;
+		System::String^ demarqueInconnue;
+	public:
+		float panierMoy();
+		float chiffreAffairesMens();
+		System::Data::DataSet^ reapprovisionnement();
+		float achatClientTot();
+		System::Data::DataSet^ plusVendu();
+		System::Data::DataSet^ moinsVendu();
+		float valComStock();
+		float valAchatStock();
+		float simulationVarComTVA();
+		float simulationVarComMargeCommerciale();
+		float simulationVarComRemiseCommerciale();
+		float simulationVarComDemarqueInconnue();
+	};
 
-};
-
+}
