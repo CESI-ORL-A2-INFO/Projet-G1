@@ -175,7 +175,7 @@ namespace ProjetPOO {
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->textBox1->Location = System::Drawing::Point(158, 9);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(244, 22);
+			this->textBox1->Size = System::Drawing::Size(219, 22);
 			this->textBox1->TabIndex = 9;
 			// 
 			// textBox2
@@ -187,7 +187,7 @@ namespace ProjetPOO {
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->textBox2->Location = System::Drawing::Point(158, 49);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(244, 22);
+			this->textBox2->Size = System::Drawing::Size(219, 22);
 			this->textBox2->TabIndex = 10;
 			// 
 			// textBox3
@@ -199,7 +199,7 @@ namespace ProjetPOO {
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			this->textBox3->Location = System::Drawing::Point(158, 93);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(244, 22);
+			this->textBox3->Size = System::Drawing::Size(219, 22);
 			this->textBox3->TabIndex = 11;
 			// 
 			// LoadCont
@@ -358,7 +358,7 @@ private: System::Void LoadCont_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void DelCont_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	this->servCont->deleteContCommande(this->textBox1->Text);
+	this->servCont->deleteContCommande(this->textBox1->Text,int::Parse(this->textBox2->Text));
 }
 private: System::Void UpdCont_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->servCont->updateContCommande(this->textBox1->Text, int::Parse(this->textBox2->Text), int::Parse(this->textBox3->Text));

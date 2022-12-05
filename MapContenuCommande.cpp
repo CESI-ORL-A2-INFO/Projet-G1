@@ -11,11 +11,11 @@ System::String^ MapContenuCommande::Insert() {
 }
 
 System::String^ MapContenuCommande::Update() {
-	return "UPDATE Alimenter SET Id_Article = '" + this->IdArticle + "', Reference = '" + this->ref + "', '" + this->Quantite + "' WHERE Reference = '" + this->ref + "'";
+	return "UPDATE Alimenter SET Id_Article = '" + this->IdArticle + "', Reference = '" + this->ref + "', Quantite = '" + this->Quantite + "' WHERE Reference = '" + this->ref + "' AND Id_Article = '" + this->IdArticle + "'";
 }
 
 System::String^ MapContenuCommande::Delete() {
-	return "DELETE FROM Alimenter WHERE Reference = '" + this->ref + "'";
+	return "DELETE FROM Alimenter WHERE Reference = '" + this->ref + "' AND Id_Article = '" + this->IdArticle + "' ";
 }
 
 void MapContenuCommande::setIdArticle(int id) {

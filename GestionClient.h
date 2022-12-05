@@ -480,6 +480,7 @@ private: System::Void boxNumClient_TextChanged(System::Object^ sender, System::E
 	this->TableClient->DataMember = "Client";
 }
 private: System::Void DelClient_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->servClient->updClientCommande(int::Parse(this->boxNumClient->Text));
 	this->servClient->delClient(int::Parse(this->boxNumClient->Text));
 }
 private: System::Void UpdClient_Click(System::Object^ sender, System::EventArgs^ e) {

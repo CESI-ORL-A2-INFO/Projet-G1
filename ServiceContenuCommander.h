@@ -11,7 +11,7 @@ namespace NS_Serv {
 		ServiceContenuCommander();
 		void addContCommande(System::String^, int, int);
 		void updateContCommande(System::String^, int, int);
-		void deleteContCommande(System::String^);
+		void deleteContCommande(System::String^, int);
 		System::Data::DataSet^ SelectAllCont(System::String^);
 	};
 }
