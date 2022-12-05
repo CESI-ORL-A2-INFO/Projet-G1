@@ -22,6 +22,7 @@ namespace NS_Comp {
 		String^ Delete();
 		String^ Update();
 		String^ SelectWithID();
+		String^ DeleteCont();
 
 		void setIdCatalogue(int);
 		void setDesignation(String^);

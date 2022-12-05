@@ -496,6 +496,7 @@ private: System::Void boxIDArticle_TextChanged(System::Object^ sender, System::E
 private: System::Void label7_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void DelStock_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->servStock->delCont(int::Parse(this->boxIDArticle->Text));
 	this->servStock->delStock(int::Parse(this->boxIDArticle->Text));
 }
 private: System::Void UpdStock_Click(System::Object^ sender, System::EventArgs^ e) {

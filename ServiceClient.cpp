@@ -71,6 +71,15 @@ void ServiceClient::updClientForAdress(int idA) {
 	this->clientCad->actionRows(sql);
 }
 
+void ServiceClient::updClientCommande(int numClient) {
+
+	System::String^ sql;
+	this->mapClient->setNumeroClient(numClient);
+	sql = this->mapClient->UpdCommande();
+
+	this->clientCad->actionRows(sql);
+}
+
 System::Data::DataSet^ ServiceClient::selectClientWithID(System::String^ nomTable, int id) {
 	System::String^ sql;
 	this->mapClient->setNumeroClient(id);

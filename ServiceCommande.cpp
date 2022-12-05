@@ -60,6 +60,27 @@ void ServiceCommande::delCommande(System::String^ ref) {
 	this->cCad->actionRows(sql);
 }
 
+void ServiceCommande::delCont(System::String^ ref) {
+
+	System::String^ sql;
+
+	this->mapCom->setReference(ref);
+
+	sql = this->mapCom->DeleteCont();
+
+	this->cCad->actionRows(sql);
+}
+
+void ServiceCommande::delFact(System::String^ ref) {
+
+	System::String^ sql;
+
+	this->mapCom->setReference(ref);
+
+	sql = this->mapCom->DeleteFact();
+
+	this->cCad->actionRows(sql);
+}
 
 System::Data::DataSet^ ServiceCommande::selectAllCommande(System::String^ nom_table) {
 

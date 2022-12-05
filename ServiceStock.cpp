@@ -50,6 +50,15 @@ void ServiceStock::delStock(int id_catalogue) {
 	this->sCad->actionRows(sql);
 }
 
+void ServiceStock::delCont(int id_catalogue) {
+	System::String^ sql;
+
+	this->mapStock->setIdCatalogue(id_catalogue);									// On associe la données entrée a l'ID du catalogue qu'on veut supprimer
+
+	sql = this->mapStock->DeleteCont();													// On supprime les données dans la base de données 
+
+	this->sCad->actionRows(sql);
+}
 
 System::Data::DataSet^ ServiceStock::selectAllStock(System::String^ nom_table) {
 	System::String^ sql;

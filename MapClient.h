@@ -18,6 +18,7 @@ namespace NS_Comp {
 		System::String^ Update();
 		System::String^ UpdForAdress();
 		System::String^ SelectWithID();
+		System::String^ UpdCommande();
 
 		void setNumeroClient(int);
 		void setAdresseLivraison(int);

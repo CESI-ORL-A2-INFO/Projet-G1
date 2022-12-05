@@ -512,6 +512,8 @@ private: System::Void LoadCom_Click(System::Object^ sender, System::EventArgs^ e
 	this->TableCommande->DataMember = "Commande";
 }
 private: System::Void DelCom_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->servCom->delFact(this->boxReference->Text);
+	this->servCom->delCont(this->boxReference->Text);
 	this->servCom->delCommande(this->boxReference->Text);
 }
 private: System::Void UpdCom_Click(System::Object^ sender, System::EventArgs^ e) {

@@ -2,6 +2,14 @@
 
 using namespace NS_Comp;
 
+String^ MapCommande::DeleteFact() {
+	return "DELETE FROM Facture WHERE Reference = '" + this->reference + "'";
+}
+
+String^ MapCommande::DeleteCont() {
+	return "DELETE FROM Alimenter WHERE Reference = '" + this->reference + "'";
+}
+
 String^ MapCommande::SelectUneCom() {
 	return "SELECT * FROM Commande WHERE Reference = '" + this->reference + "'";
 }
