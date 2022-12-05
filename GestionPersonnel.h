@@ -450,9 +450,10 @@ private: System::Void LoadPers_Click(System::Object^ sender, System::EventArgs^ 
 	this->dataPers = this->servPers->selectAllPers("Personnel");
 	this->TablePersonnel->DataSource = this->dataPers;
 	this->TablePersonnel->DataMember = "Personnel";
+	this->boxID->Text = "1";
 }
 private: System::Void InsPers_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (this->boxAdresse->Text->IsNullOrWhiteSpace("")) { //Vérifie si les 2 ID adresses sont rentrés.
+	if (this->boxAdresse->Text->Equals("")) { //Vérifie si les 2 ID adresses sont rentrés.
 		gestAdress = gcnew GestionAdress();// Ouvre la fenêtre de gestion des Adresses.
 		gestAdress->Show();
 	}
@@ -461,7 +462,7 @@ private: System::Void InsPers_Click(System::Object^ sender, System::EventArgs^ e
 	}
 }
 private: System::Void UpdPers_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (this->boxAdresse->Text->IsNullOrWhiteSpace("")) { //Vérifie si les 2 ID adresses sont rentrés.
+	if (this->boxAdresse->Text->Equals("")) { //Vérifie si les 2 ID adresses sont rentrés.
 		gestAdress = gcnew GestionAdress();// Ouvre la fenêtre de gestion des Adresses.
 		gestAdress->Show();
 	}
@@ -475,7 +476,7 @@ private: System::Void DelPers_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void boxID_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	if (!this->boxID->Text->Equals("")) {
-		this->dataUnePers = this->servPers->selectUnPersonnel("Rsl", int::Parse(this->boxID->Text));
+		this->dataUnePers = this->servPers->selectUnPersonnel("Personnel", int::Parse(this->boxID->Text));
 		System::Data::DataTableReader^ reader1;
 		reader1 = this->dataUnePers->CreateDataReader();
 		reader1->Read();

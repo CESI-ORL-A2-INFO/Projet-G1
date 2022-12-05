@@ -2,19 +2,23 @@
 
 using namespace NS_Serv;
 
-void ServiceCommande::addCommande(System::String^ reference, System::String^ nomSociete, float totalTTC, float montantRemise, int totalArticles, int ID_Facture, int numeroCLient, String^ dernierPaiement, String^ dateEmission, String^ datePaiement, String^ dateLivraison)
+ServiceCommande::ServiceCommande() {
+	this->cCad = gcnew NS_Comp_Data::Cad();
+	this->mapCom = gcnew NS_Comp::MapCommande();
+	this->mapFact = gcnew NS_Comp::MapFacture();
+}
+
+void ServiceCommande::addCommande(System::String^ ref, System::String^ nomSociete, System::String^ totalTTC, System::String^ montantRemise, int totalArticles, int numeroCLient, String^ dateEmission, String^ datePaiement, String^ dateLivraison)
 {
 
 	System::String^ sql;
 
-	this->mapCom->setReference(reference);
+	this->mapCom->setReference(ref);
 	this->mapCom->setNomSociete(nomSociete); // On associe la données entrée au nom de la société  d'une commande
 	this->mapCom->setTotalTTC(totalTTC);
 	this->mapCom->setMontantRemise(montantRemise);
 	this->mapCom->setTotalArticles(totalArticles);
-	this->mapCom->setIDFacture(ID_Facture);
 	this->mapCom->setNumeroClient(numeroCLient);
-	this->mapCom->setDernierPaiement(dernierPaiement);
 	this->mapCom->setDateEmission(dateEmission);
 	this->mapCom->setDatePaiement(datePaiement);
 	this->mapCom->setDateLivraison(dateLivraison);
@@ -25,7 +29,7 @@ void ServiceCommande::addCommande(System::String^ reference, System::String^ nom
 
 };
 
-void ServiceCommande::updateCommande(System::String^ reference,System::String^ NomSociete, float TotalTTC, float MontantRemise, int TotalArticles, int ID_Facture, int NumeroCLient, String^ DernierPaiement, String^ DateEmission, String^ DatePaiement, String^ DateLivraison) {
+void ServiceCommande::updateCommande(System::String^ reference,System::String^ NomSociete, System::String^ TotalTTC, System::String^ MontantRemise, int TotalArticles, int NumeroCLient, String^ DateEmission, String^ DatePaiement, String^ DateLivraison) {
 
 	System::String^ sql;
 
@@ -34,9 +38,7 @@ void ServiceCommande::updateCommande(System::String^ reference,System::String^ N
 	this->mapCom->setTotalTTC(TotalTTC);
 	this->mapCom->setMontantRemise(MontantRemise);
 	this->mapCom->setTotalArticles(TotalArticles);
-	this->mapCom->setIDFacture(ID_Facture);
 	this->mapCom->setNumeroClient(NumeroCLient);
-	this->mapCom->setDernierPaiement(DernierPaiement);
 	this->mapCom->setDateEmission(DateEmission);
 	this->mapCom->setDatePaiement(DatePaiement);
 	this->mapCom->setDateLivraison(DateLivraison);
@@ -47,11 +49,11 @@ void ServiceCommande::updateCommande(System::String^ reference,System::String^ N
 
 }
 
-void ServiceCommande::delCommande(int totalArticles) {
+void ServiceCommande::delCommande(System::String^ ref) {
 
 	System::String^ sql;
 
-	this->mapCom->setTotalArticles(totalArticles);
+	this->mapCom->setReference(ref);
 
 	sql = this->mapCom->Delete();
 
@@ -68,12 +70,13 @@ System::Data::DataSet^ ServiceCommande::selectAllCommande(System::String^ nom_ta
 	return this->cCad->getRows(sql, nom_table );
 }
 
-//DataSet ServiceCommande::selectCom(System::String^ nom_table, int totalArticles) {
-//
-//	System::String^ sql;
-//
-//	sql = this->mapCom->Select();
-//
-//	return this->cCad->getRows(sql, nom_table);
-//}
+System::Data::DataSet^ ServiceCommande::selectCommande(System::String^ nom_table, System::String^ ref) {
+
+	System::String^ sql;
+
+	this->mapCom->setReference(ref);
+	sql = this->mapCom->SelectUneCom();
+
+	return this->cCad->getRows(sql, nom_table);
+}
 

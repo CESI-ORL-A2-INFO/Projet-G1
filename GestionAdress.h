@@ -409,6 +409,7 @@ private: System::Void LoadAdress_Click(System::Object^ sender, System::EventArgs
 	this->dataAdress = this->servAdress->selectAllAdress("Rsl");
 	this->TableAdress->DataSource = this->dataAdress;
 	this->TableAdress->DataMember = "Rsl";
+	this->boxIDAdress->Text = "1";
 }
 private: System::Void DelAdress_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->servClient->updClientForAdress(int::Parse(this->boxIDAdress->Text));

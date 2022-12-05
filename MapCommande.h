@@ -7,8 +7,8 @@ namespace NS_Comp {
 	private:
 		String^ reference;
 		String^ nomSociete;
-		float TotalTTC;
-		float MontantRemise;
+		String^ TotalTTC;
+		String^ MontantRemise;
 		int TotalArticles;
 		int IDFacture;
 		int NumeroClient;
@@ -24,11 +24,12 @@ namespace NS_Comp {
 		String^ Insert();
 		String^ Delete();
 		String^ Update();
+		String^ SelectUneCom();
 
 		void setReference(String^);
 		void setNomSociete(String^);
-		void setTotalTTC(float);
-		void setMontantRemise(float);
+		void setTotalTTC(String^);
+		void setMontantRemise(String^);
 		void setTotalArticles(int);
 		void setIDFacture(int);
 		void setNumeroClient(int);
@@ -41,8 +42,8 @@ namespace NS_Comp {
 
 		String^ getReference();
 		String^ getNomSociete();
-		float getTotalTTC();
-		float getMontantRemise();
+		String^ getTotalTTC();
+		String^ getMontantRemise();
 		int getTotalArticles();
 		int getIDFacture();
 		int getNumeroClient();

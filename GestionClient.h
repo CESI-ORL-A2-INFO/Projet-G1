@@ -448,10 +448,10 @@ namespace ProjetPOO {
 	}
 private: System::Void loadClient_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->TableClient->Refresh();
-	this->dataClient = this->servClient->selectAllClient("Rsl");
+	this->dataClient = this->servClient->selectAllClient("Client");
 	this->TableClient->DataSource = this->dataClient;
-	this->TableClient->DataMember = "Rsl";
-
+	this->TableClient->DataMember = "Client";
+	this->boxNumClient->Text = "2";
 }
 private: System::Void deleteClient_Click(System::Object^ sender, System::EventArgs^ e) {
 }
@@ -475,15 +475,15 @@ private: System::Void boxNumClient_TextChanged(System::Object^ sender, System::E
 		this->boxIDAdresseLivraison->Text = reader->GetValue(6)->ToString();
 	}
 	this->TableClient->Refresh();
-	this->dataClient = this->servClient->selectAllClient("Rsl");
+	this->dataClient = this->servClient->selectAllClient("Client");
 	this->TableClient->DataSource = this->dataClient;
-	this->TableClient->DataMember = "Rsl";
+	this->TableClient->DataMember = "Client";
 }
 private: System::Void DelClient_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->servClient->delClient(int::Parse(this->boxNumClient->Text));
 }
 private: System::Void UpdClient_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (this->boxIDAdresseFact->Text->IsNullOrWhiteSpace("") || this->boxIDAdresseLivraison->Text->IsNullOrWhiteSpace("")) { //Vérifie si les 2 ID adresses sont rentrés.
+	if (this->boxIDAdresseFact->Text->Equals("") || this->boxIDAdresseLivraison->Text->Equals("")) { //Vérifie si les 2 ID adresses sont rentrés.
 		gestAdress = gcnew GestionAdress();// Ouvre la fenêtre de gestion des Adresses.
 		gestAdress->Show();
 	}
@@ -492,7 +492,7 @@ private: System::Void UpdClient_Click(System::Object^ sender, System::EventArgs^
 	}
 }
 private: System::Void InsClient_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (this->boxIDAdresseFact->Text->IsNullOrWhiteSpace("") || this->boxIDAdresseLivraison->Text->IsNullOrWhiteSpace("")) { //Vérifie si les 2 ID adresses sont rentrés.
+	if (this->boxIDAdresseFact->Text->Equals("") || this->boxIDAdresseLivraison->Text->Equals("")) { //Vérifie si les 2 ID adresses sont rentrés.
 		gestAdress = gcnew GestionAdress();// Ouvre la fenêtre de gestion des Adresses.
 		gestAdress->Show();
 	}
