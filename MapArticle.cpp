@@ -2,6 +2,10 @@
 
 using namespace NS_Comp;
 
+String^ MapArticle::DeleteCont() {
+	return "DELETE FROM Alimenter WHERE Id_Article = '" + this->idCatalogue + "'";
+}
+
 String^ MapArticle::SelectWithID() {
 	return "SELECT Id_Article,Seuil_Reapprovisionnement,Prix_HT,Nature,Couleur,Designation,Quantite,TVA FROM [Article], [TauxTVA] WHERE Article.Id_TVA = TauxTVA.Id_TVA AND Id_Article = '" + this->idCatalogue + "' ";
 }

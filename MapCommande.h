@@ -25,6 +25,8 @@ namespace NS_Comp {
 		String^ Delete();
 		String^ Update();
 		String^ SelectUneCom();
+		String^ DeleteCont();
+		String^ DeleteFact();
 
 		void setReference(String^);
 		void setNomSociete(String^);

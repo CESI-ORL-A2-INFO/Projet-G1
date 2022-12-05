@@ -8,6 +8,9 @@ System::String^ Client::SelectWithID() {
 System::String^ Client::UpdForAdress() {
 	return "UPDATE [Client] SET [Id_Adresse] = 1, [Id_Adresse_Livrer] = 1 WHERE [Id_Adresse] = " + this->Id_Adresse + " OR [Id_Adresse_Livrer] = " + this->Id_Adresse_Livrer + "";
 }
+System::String^ Client::UpdCommande() {
+	return "UPDATE [Commande] SET [Numero_Client] = 2 WHERE [Numero_Client] = '" + this->Numero_client + "'";
+}
 System::String^ Client::Select()
 {
 	return "SELECT * FROM [Client]";

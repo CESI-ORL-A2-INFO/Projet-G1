@@ -357,6 +357,7 @@ private: System::Void LoadCont_Click(System::Object^ sender, System::EventArgs^ 
 	this->TableArticle->DataMember = "Article";
 }
 private: System::Void DelCont_Click(System::Object^ sender, System::EventArgs^ e) {
+
 	this->servCont->deleteContCommande(this->textBox1->Text);
 }
 private: System::Void UpdCont_Click(System::Object^ sender, System::EventArgs^ e) {

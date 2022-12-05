@@ -17,7 +17,7 @@ namespace NS_Serv {
 		System::Data::DataSet^ selectClientWithID(System::String^, int);
 		System::Data::DataSet^ selectAllClient(System::String^);
 		void updClientForAdress(int);
-
+		void updClientCommande(int);
 	};
 }
 
