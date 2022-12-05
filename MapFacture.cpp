@@ -2,16 +2,20 @@
 
 using namespace NS_Comp;
 
+String^ MapFacture::SelectWithFact() {
+	return "SELECT * FROM Facture WHERE Id_Facture = '" + this->IdFacture + "'";
+}
+
 String^ MapFacture::Select() {
 	return "SELECT * FROM Facture";
 }
 
 String^ MapFacture::Insert() {
-	return "INSERT INTO Facture (Dernier_Paiement_En_Date,Numero_Client,Reference,Id_moyPaiement) VALUES ('" + this->dernierPaiementEnDate + "','" + this->numClient + "','" + this->reference + "','" + this->idMoyPaiement + "'); ";
+	return "INSERT INTO Facture (Dernier_Paiement_En_Date,Reference,Id_moyPaiement) VALUES ('" + this->dernierPaiementEnDate + "','" + this->reference + "','" + this->idMoyPaiement + "'); ";
 }
 
 String^ MapFacture::Update() {
-	return "UPDATE Facture SET Dernier_Paiement_En_Date='"+this->dernierPaiementEnDate+"',Numero_Client='" + this->numClient + "',Reference='" + this->reference + "',Id_moyPaiement='" + this->idMoyPaiement + "' WHERE Id_Facture = '"+this->IdFacture+"';";
+	return "UPDATE Facture SET Dernier_Paiement_En_Date='"+this->dernierPaiementEnDate+"',Reference='" + this->reference + "',Id_moyPaiement='" + this->idMoyPaiement + "' WHERE Id_Facture = '"+this->IdFacture+"';";
 }
 
 String^ MapFacture::Delete() {

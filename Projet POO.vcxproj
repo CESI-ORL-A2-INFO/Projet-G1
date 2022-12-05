@@ -124,18 +124,31 @@
   <ItemGroup>
     <ClCompile Include="Cad.cpp" />
     <ClCompile Include="GestionAdress.cpp" />
+    <ClCompile Include="GestionContenuCommande.cpp" />
+    <ClCompile Include="GestionFacture.cpp" />
     <ClCompile Include="MapAdresse.cpp" />
     <ClCompile Include="MapClient.cpp" />
+    <ClCompile Include="MapContenuCommande.cpp" />
     <ClCompile Include="MapPersonnel.cpp" />
+    <ClCompile Include="ServiceContenuCommander.cpp" />
+    <ClCompile Include="ServiceFacture.cpp" />
     <ClCompile Include="ServicePersonnel.cpp" />
+    <ClCompile Include="ServiceStock.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cad.h" />
     <ClInclude Include="GestionAdress.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="GestionContenuCommande.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="GestionFacture.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MapAdresse.h" />
     <ClInclude Include="MapClient.h" />
+    <ClInclude Include="MapContenuCommande.h" />
     <ClInclude Include="MapPersonnel.h" />
     <ClCompile Include="AffichageStat.cpp" />
     <ClCompile Include="GestionClient.cpp" />
@@ -149,7 +162,10 @@
     <ClCompile Include="MapArticle.cpp" />
     <ClCompile Include="MapCommande.cpp" />
     <ClCompile Include="MapFacture.cpp" />
+    <ClInclude Include="ServiceContenuCommander.h" />
+    <ClInclude Include="ServiceFacture.h" />
     <ClInclude Include="ServicePersonnel.h" />
+    <ClInclude Include="ServiceStock.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AffichageStat.h">
@@ -186,6 +202,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionCommande.resx">
       <DependentUpon>GestionCommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionContenuCommande.resx">
+      <DependentUpon>GestionContenuCommande.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestionFacture.resx">
+      <DependentUpon>GestionFacture.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GestionPersonnel.resx">
       <DependentUpon>GestionPersonnel.h</DependentUpon>

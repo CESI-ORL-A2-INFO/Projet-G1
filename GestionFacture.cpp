@@ -1,14 +1,14 @@
-#include "GestionStock.h"
+#include "GestionFacture.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
 
 
 [STAThreadAttribute]
-void MainStock(array<String^>^ args)
+void MainFact(array<String^>^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	ProjetPOO::GestionStock monFormulaire5;
-	Application::Run(% monFormulaire5);
+	ProjetPOO::GestionFacture monFormulaire8;
+	Application::Run(% monFormulaire8);
 }

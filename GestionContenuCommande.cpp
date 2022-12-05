@@ -1,14 +1,14 @@
-#include "GestionStock.h"
+#include "GestionContenuCommande.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
 
 
 [STAThreadAttribute]
-void MainStock(array<String^>^ args)
+void MainCont(array<String^>^ args)
 {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	ProjetPOO::GestionStock monFormulaire5;
-	Application::Run(% monFormulaire5);
+	ProjetPOO::GestionContenuCommande monFormulaire9;
+	Application::Run(% monFormulaire9);
 }

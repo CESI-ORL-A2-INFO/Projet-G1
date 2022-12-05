@@ -4,6 +4,7 @@
 #include "GestionPersonnel.h"
 #include "GestionStock.h"
 #include "AffichageStat.h"
+#include "GestionFacture.h"
 
 namespace ProjetPOO {
 
@@ -55,7 +56,9 @@ namespace ProjetPOO {
 		GestionCommande^ gestCom;
 		GestionPersonnel^ gestPers;
 		GestionStock^ gestStock;
-		AffichageStat^ stat;
+		GestionFacture^ gestFact;
+	private: System::Windows::Forms::Button^ button_Facture;
+		   AffichageStat^ stat;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -69,6 +72,7 @@ namespace ProjetPOO {
 			this->button_gestCommande = (gcnew System::Windows::Forms::Button());
 			this->button_gestStock = (gcnew System::Windows::Forms::Button());
 			this->button_stat = (gcnew System::Windows::Forms::Button());
+			this->button_Facture = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// button_gestPersonnel
@@ -139,7 +143,7 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->button_gestStock->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->button_gestStock->Location = System::Drawing::Point(0, 246);
+			this->button_gestStock->Location = System::Drawing::Point(0, 328);
 			this->button_gestStock->Name = L"button_gestStock";
 			this->button_gestStock->Size = System::Drawing::Size(530, 82);
 			this->button_gestStock->TabIndex = 3;
@@ -158,7 +162,7 @@ namespace ProjetPOO {
 				static_cast<System::Byte>(0)));
 			this->button_stat->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
-			this->button_stat->Location = System::Drawing::Point(0, 328);
+			this->button_stat->Location = System::Drawing::Point(0, 410);
 			this->button_stat->Name = L"button_stat";
 			this->button_stat->Size = System::Drawing::Size(530, 82);
 			this->button_stat->TabIndex = 4;
@@ -166,15 +170,35 @@ namespace ProjetPOO {
 			this->button_stat->UseVisualStyleBackColor = false;
 			this->button_stat->Click += gcnew System::EventHandler(this, &MyForm::button_stat_Click);
 			// 
+			// button_Facture
+			// 
+			this->button_Facture->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+				static_cast<System::Int32>(static_cast<System::Byte>(66)));
+			this->button_Facture->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->button_Facture->Dock = System::Windows::Forms::DockStyle::Top;
+			this->button_Facture->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button_Facture->Font = (gcnew System::Drawing::Font(L"Microsoft YaHei UI", 16.16F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button_Facture->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
+				static_cast<System::Int32>(static_cast<System::Byte>(186)));
+			this->button_Facture->Location = System::Drawing::Point(0, 246);
+			this->button_Facture->Name = L"button_Facture";
+			this->button_Facture->Size = System::Drawing::Size(530, 82);
+			this->button_Facture->TabIndex = 5;
+			this->button_Facture->Text = L"Gestion Facture";
+			this->button_Facture->UseVisualStyleBackColor = false;
+			this->button_Facture->Click += gcnew System::EventHandler(this, &MyForm::button_Facture_Click);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
 				static_cast<System::Int32>(static_cast<System::Byte>(44)));
-			this->ClientSize = System::Drawing::Size(530, 411);
+			this->ClientSize = System::Drawing::Size(530, 493);
 			this->Controls->Add(this->button_stat);
 			this->Controls->Add(this->button_gestStock);
+			this->Controls->Add(this->button_Facture);
 			this->Controls->Add(this->button_gestCommande);
 			this->Controls->Add(this->button_gestClient);
 			this->Controls->Add(this->button_gestPersonnel);
@@ -206,6 +230,10 @@ private: System::Void button_gestStock_Click(System::Object^ sender, System::Eve
 private: System::Void button_stat_Click(System::Object^ sender, System::EventArgs^ e) {
 	stat = gcnew AffichageStat();
 	stat->Show();
+}
+private: System::Void button_Facture_Click(System::Object^ sender, System::EventArgs^ e) {
+	gestFact = gcnew GestionFacture();
+	gestFact->Show();
 }
 };
 }

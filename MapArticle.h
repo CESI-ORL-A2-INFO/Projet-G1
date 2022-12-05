@@ -11,7 +11,8 @@ namespace NS_Comp {
 		String^ natureArticle;
 		String^ couleur;
 		int SeuilApprov;
-		float prixHT;
+		String^ prixHT;
+		int quantite;
 		int idTVA;
 		String^ sSql;
 
@@ -20,21 +21,24 @@ namespace NS_Comp {
 		String^ Insert();
 		String^ Delete();
 		String^ Update();
+		String^ SelectWithID();
 
 		void setIdCatalogue(int);
 		void setDesignation(String^);
 		void setNatureArticle(String^);
 		void setCouleur(String^);
 		void setSeuilApprov(int);
-		void setPrixHT(float);
+		void setPrixHT(String^);
 		void setIdTVA(int);
+		void setQuantite(int);
 
 		int getIdCatalogue();
 		String^ getDesignation();
 		String^ getNatureArticle();
 		String^ getCouleur();
 		int getSeuilApprov();
-		float getPrixHT();
+		String^ getPrixHT();
 		int getIdTVA();
+		int getQuantite();
 	};
 }

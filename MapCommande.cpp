@@ -2,16 +2,20 @@
 
 using namespace NS_Comp;
 
+String^ MapCommande::SelectUneCom() {
+	return "SELECT * FROM Commande WHERE Reference = '" + this->reference + "'";
+}
+
 String^ MapCommande::Select() {
 	return "SELECT * FROM Commande";
 }
 
 String^ MapCommande::Insert() {
-	return "INSERT INTO Adresse (Nom_Societe,Total_TTC,Montant_Remise,Total_Articles,Date_Emission,Date_Paiement,Date_Livraison,Numero_Client,Id_Facture) VALUES ('" + this->nomSociete + "','" + this->TotalTTC + "','" + this->MontantRemise + "',,'" + this->TotalArticles + "','" + this->DateEmission + "','" + this->DatePaiement + "','" + this->DateLivraison + "','" + this->NumeroClient + "','" + this->IDFacture + "'); ";
+	return "INSERT INTO Commande (Reference,Nom_Societe,Total_TTC,Montant_Remise,Total_Articles,Date_Emission,Date_Paiement,Date_Livraison,Numero_Client) VALUES('" + this->reference + "','" + this->nomSociete + "','" + this->TotalTTC + "','" + this->MontantRemise + "','" + this->TotalArticles + "','" + this->DateEmission + "','" + this->DatePaiement + "','" + this->DateLivraison + "','" + this->NumeroClient + "'); ";
 }
 
 String^ MapCommande::Update() {
-	return "UPDATE Commande SET Nom_Societe='"+this->nomSociete+"',Total_TTC='" + this->TotalTTC + "',Montant_Remise='" + this->MontantRemise + "',Total_Articles='" + this->TotalArticles + "',Date_Emission='" + this->DateEmission + "',Date_Paiement='" + this->DatePaiement + "',Date_Livraison='" + this->DateLivraison + "',Numero_Client='" + this->NumeroClient + "',Id_Facture='" + this->IDFacture + "' WHERE Reference = '" + this->reference + "';";
+	return "UPDATE Commande SET Reference = '" + this->reference + "', Nom_Societe='" + this->nomSociete + "',Total_TTC='" + this->TotalTTC + "',Montant_Remise='" + this->MontantRemise + "',Total_Articles='" + this->TotalArticles + "',Date_Emission='" + this->DateEmission + "',Date_Paiement='" + this->DatePaiement + "',Date_Livraison='" + this->DateLivraison + "',Numero_Client='" + this->NumeroClient + "' WHERE Reference = '" + this->reference + "';";
 }
 
 String^ MapCommande::Delete() {
@@ -26,11 +30,11 @@ void MapCommande::setNomSociete(String^ societe) {
 	this->nomSociete = societe;
 }
 
-void MapCommande::setTotalTTC(float total) {
+void MapCommande::setTotalTTC(String^ total) {
 	this->TotalTTC = total;
 }
 
-void MapCommande::setMontantRemise(float remise) {
+void MapCommande::setMontantRemise(String^ remise) {
 	this->MontantRemise = remise;
 }
 
@@ -77,10 +81,10 @@ String^ MapCommande::getReference() {
 String^ MapCommande::getNomSociete() {
 	return this->nomSociete;
 }
-float MapCommande::getTotalTTC() {
+String^ MapCommande::getTotalTTC() {
 	return this->TotalTTC;
 }
-float MapCommande::getMontantRemise() {
+String^ MapCommande::getMontantRemise() {
 	return this->MontantRemise;
 }
 int MapCommande::getTotalArticles() {

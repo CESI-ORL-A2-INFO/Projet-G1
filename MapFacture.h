@@ -18,6 +18,7 @@ namespace NS_Comp {
 		String^ Insert();
 		String^ Delete();
 		String^ Update();
+		String^ SelectWithFact();
 
 		void setIdFacture(int);
 		void setDernierPaiementEnDate(String^);
