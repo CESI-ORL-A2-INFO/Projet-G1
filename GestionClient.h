@@ -143,7 +143,7 @@ namespace ProjetPOO {
 			this->TableClient->Name = L"TableClient";
 			this->TableClient->RowHeadersWidth = 51;
 			this->TableClient->RowTemplate->Height = 24;
-			this->TableClient->Size = System::Drawing::Size(493, 585);
+			this->TableClient->Size = System::Drawing::Size(951, 585);
 			this->TableClient->TabIndex = 1;
 			// 
 			// label1
@@ -415,7 +415,7 @@ namespace ProjetPOO {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
 				static_cast<System::Int32>(static_cast<System::Byte>(44)));
-			this->ClientSize = System::Drawing::Size(923, 585);
+			this->ClientSize = System::Drawing::Size(1381, 585);
 			this->Controls->Add(this->InsClient);
 			this->Controls->Add(this->UpdClient);
 			this->Controls->Add(this->DelClient);
