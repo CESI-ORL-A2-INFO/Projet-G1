@@ -75,5 +75,18 @@ L'application vient tout juste d'être exécutable. Les fenêtres sont toutes ut
 ***
 ### Droits d'auteurs et informations sur la licence.
 
+Nous vous avons laissé le choix de sélectionner l'un de nos générateurs pour créer les accords juridiques requis pour votre entreprise :  
+
+ * Notre générateur de politique de confidentialité peut vous aider à générer une politique de confidentialité personnalisée en trois minutes environ, gratuitement.  
+ 
+ * Notre générateur de conditions générales peut vous aider à générer un accord de conditions générales personnalisé en trois minutes environ, gratuitement.
+ * Notre générateur de CLUF peut créer un contrat de licence utilisateur final personnalisé pour votre application mobile ou de bureau.
+ * Notre générateur de politique de cookies peut créer une politique de cookies personnalisée pour vous aider à vous conformer à la directive sur la vie privée et au GDPR.
+ * Notre générateur de clauses de non-responsabilité peut créer une clause de non-responsabilité ou une divulgation pour votre site web.
+ * Notre générateur de politique de retour et de remboursement peut aider votre boutique en ligne en créant une politique de retour ou de remboursement.
+ * Intégrez une bannière gratuite d'avis de cookies et de consentement aux cookies pour vous conformer à la directive européenne ePrivacy et à la nouvelle loi GDPR concernant les cookies.
+
+
+
 ***
 ***
