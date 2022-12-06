@@ -134,6 +134,7 @@
     <ClCompile Include="ServiceFacture.cpp" />
     <ClCompile Include="ServicePersonnel.cpp" />
     <ClCompile Include="ServiceStock.cpp" />
+    <ClCompile Include="Statistique.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cad.h" />
@@ -166,6 +167,7 @@
     <ClInclude Include="ServiceFacture.h" />
     <ClInclude Include="ServicePersonnel.h" />
     <ClInclude Include="ServiceStock.h" />
+    <ClInclude Include="Statistique.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AffichageStat.h">
@@ -194,6 +196,9 @@
     <ClInclude Include="MapFacture.h" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AffichageStat.resx">
+      <DependentUpon>AffichageStat.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GestionAdress.resx">
       <DependentUpon>GestionAdress.h</DependentUpon>
     </EmbeddedResource>
