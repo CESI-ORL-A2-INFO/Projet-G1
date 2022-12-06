@@ -135,7 +135,7 @@ namespace ProjetPOO {
 			this->TableStock->Name = L"TableStock";
 			this->TableStock->RowHeadersWidth = 51;
 			this->TableStock->RowTemplate->Height = 24;
-			this->TableStock->Size = System::Drawing::Size(493, 585);
+			this->TableStock->Size = System::Drawing::Size(951, 585);
 			this->TableStock->TabIndex = 3;
 			// 
 			// label1
@@ -434,7 +434,7 @@ namespace ProjetPOO {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
 				static_cast<System::Int32>(static_cast<System::Byte>(44)));
-			this->ClientSize = System::Drawing::Size(923, 585);
+			this->ClientSize = System::Drawing::Size(1381, 585);
 			this->Controls->Add(this->menuTVA);
 			this->Controls->Add(this->label8);
 			this->Controls->Add(this->InsStock);

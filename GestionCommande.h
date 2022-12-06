@@ -143,7 +143,7 @@ namespace ProjetPOO {
 			this->TableCommande->Name = L"TableCommande";
 			this->TableCommande->RowHeadersWidth = 51;
 			this->TableCommande->RowTemplate->Height = 24;
-			this->TableCommande->Size = System::Drawing::Size(493, 585);
+			this->TableCommande->Size = System::Drawing::Size(951, 585);
 			this->TableCommande->TabIndex = 2;
 			// 
 			// label1
@@ -468,7 +468,7 @@ namespace ProjetPOO {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
 				static_cast<System::Int32>(static_cast<System::Byte>(44)));
-			this->ClientSize = System::Drawing::Size(923, 585);
+			this->ClientSize = System::Drawing::Size(1381, 585);
 			this->Controls->Add(this->InsCom);
 			this->Controls->Add(this->UpdCom);
 			this->Controls->Add(this->DelCom);

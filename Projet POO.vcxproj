@@ -163,6 +163,7 @@
     <ClCompile Include="MapArticle.cpp" />
     <ClCompile Include="MapCommande.cpp" />
     <ClCompile Include="MapFacture.cpp" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="ServiceContenuCommander.h" />
     <ClInclude Include="ServiceFacture.h" />
     <ClInclude Include="ServicePersonnel.h" />
@@ -223,6 +224,12 @@
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Projet POO.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\LogoProjetPOO.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
