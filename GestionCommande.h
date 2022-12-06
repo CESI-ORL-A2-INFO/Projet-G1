@@ -92,6 +92,7 @@ namespace ProjetPOO {
 		void InitializeComponent(void)
 		{
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GestionCommande::typeid));
 			this->TableCommande = (gcnew System::Windows::Forms::DataGridView());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
@@ -493,6 +494,7 @@ namespace ProjetPOO {
 			this->Controls->Add(this->TableCommande);
 			this->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"GestionCommande";
 			this->Text = L"GestionCommande";
 			this->Load += gcnew System::EventHandler(this, &GestionCommande::GestionCommande_Load);

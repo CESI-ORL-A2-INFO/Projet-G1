@@ -84,6 +84,7 @@ namespace ProjetPOO {
 		void InitializeComponent(void)
 		{
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(GestionAdress::typeid));
 			this->TableAdress = (gcnew System::Windows::Forms::DataGridView());
 			this->InsAdress = (gcnew System::Windows::Forms::Button());
 			this->LoadAdress = (gcnew System::Windows::Forms::Button());
@@ -390,6 +391,7 @@ namespace ProjetPOO {
 			this->Controls->Add(this->DelAdress);
 			this->Controls->Add(this->LoadAdress);
 			this->Controls->Add(this->TableAdress);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->Name = L"GestionAdress";
 			this->Text = L"GestionAdress";
 			this->Load += gcnew System::EventHandler(this, &GestionAdress::GestionAdress_Load);
