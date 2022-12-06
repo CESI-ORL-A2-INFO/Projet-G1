@@ -14,29 +14,29 @@ namespace NS_Comp {											//Ici, nous allons créer un "groupe de classe" que
 		System::String^ Prenom_client;						//Le prénom
 		System::String^ sSql;
 
-	public:
-		System::String^ Select();
-		System::String^ Insert();
-		System::String^ Delete();
-		System::String^ Update();
-		System::String^ UpdForAdress();
-		System::String^ SelectWithID();
-		System::String^ UpdCommande();
+	public:													//Ici, chaque méthode créée est "publique", donc accessible par l'entièreté des autres classes
+		System::String^ Select();							//La méthode SELECT (base de données) pour sélectionner une ou plusieures adresse(s)
+		System::String^ Insert();							//La méthode INSERT (base de données) pour insérer une nouvelle adresse
+		System::String^ Delete();							//La méthode DELETE (base de données) pour supprimer une adresse
+		System::String^ Update();							//La méthode UPDATE (base de données) pour mettre à jour les informations d'une adresse
+		System::String^ UpdForAdress();						//La méthode pour mettre à jour la/les adresse(s) d'un client
+		System::String^ SelectWithID();						//La méthode pour sélectionner un client via son ID
+		System::String^ UpdCommande();						//La méthode pour mettre à jour une commande d'un client
 
-		void setNumeroClient(int);
-		void setAdresseLivraison(int);
-		void setAdressePaiement(int);
-		void setDateDeNaissance(System::String^);
-		void setDatePremiereCommande(System::String^);
-		void setNomClient(System::String^);
-		void setPrenomClient(System::String^);
+		void setNumeroClient(int);							//La méthode pour entrer le numéro de client d'un client
+		void setAdresseLivraison(int);						//La méthode pour entrer l'adresse de livraison
+		void setAdressePaiement(int);						//La méthode pour entrer l'adresse de paiement
+		void setDateDeNaissance(System::String^);			//La méthode pour entrer la date de naissance
+		void setDatePremiereCommande(System::String^);		//La méthode pour entrer la date de la première commande
+		void setNomClient(System::String^);					//La méthode pour entrer le nom
+		void setPrenomClient(System::String^);				//La méthode pour entrer le prénom
 
-		int getNumeroClient(void);
-		int getAdresseLivraison(void);
-		int getAdressePaiement(void);
-		System::String^ getDateDeNaissance(void);
-		System::String^ getDatePremiereCommande(void);
-		System::String^ getNomClient(void);
-		System::String^ getPrenomClient(void);
+		int getNumeroClient(void);							//La méthode pour récupérer (afficher) le numéro de client d'un client
+		int getAdresseLivraison(void);						//La méthode pour récupérer (afficher) l'adresse de livraison
+		int getAdressePaiement(void);						//La méthode pour récupérer (afficher) l'adresse de paiement
+		System::String^ getDateDeNaissance(void);			//La méthode pour récupérer (afficher) la date de naissance
+		System::String^ getDatePremiereCommande(void);		//La méthode pour récupérer (afficher) la date de la première commande
+		System::String^ getNomClient(void);					//La méthode pour récupérer (afficher) le nom
+		System::String^ getPrenomClient(void);				//La méthode pour récupérer (afficher) le prénom
 	};
 }

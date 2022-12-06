@@ -5,7 +5,7 @@ namespace NS_Comp {								//Ici, nous allons créer un "groupe de classe" que no
 												//Ici, chaque attribut est "privé", donc accessible SEULEMENT par cette classe
 												//Ensuite, nous allons donner chaque attribut que la classe doit posséder
 
-		int IDAdresse;							//L'identifiant de l'adresse
+		int IDAdresse;							//L'identifiant d'une adresse
 		int NumeroRue;							//Le numéro de rue
 		int CodePostal;							//Le code postal
 		System::String^ NomRue;					//Le nom de la rue
@@ -19,18 +19,18 @@ namespace NS_Comp {								//Ici, nous allons créer un "groupe de classe" que no
 		System::String^ Update(void);			//La méthode UPDATE (base de données) pour mettre à jour les informations d'une adresse
 		System::String^ SelectWithID();			//La méthode pour sélectionner une adresse via son ID
 
-		void setIDAdresse(int);
-		void setNumeroRue(int);
-		void setCodePostal(int);
-		void setNomRue(System::String^);
-		void setVille(System::String^);
-		void setTypeRue(System::String^);
+		void setIDAdresse(int);					//La méthode pour entrer l'identifiant d'une adresse
+		void setNumeroRue(int);					//La méthode pour entrer le numéro de rue
+		void setCodePostal(int);				//La méthode pour entrer le code postal
+		void setNomRue(System::String^);		//La méthode pour entrer le nom de la rue
+		void setVille(System::String^);			//La méthode pour entrer le nom de la ville
+		void setTypeRue(System::String^);		//La méthode pour entrer le type de rue
 
-		int getIDAdresse(void);
-		int getNumeroRue(void);
-		int getCodePostal(void);
-		System::String^ getNomRue(void);
-		System::String^ getVille(void);
-		System::String^ getTypeRue(void);
+		int getIDAdresse(void);					//La méthode pour récupérer (afficher) l'identifiant d'une adresse
+		int getNumeroRue(void);					//La méthode pour récupérer (afficher) le numéro de rue
+		int getCodePostal(void);				//La méthode pour récupérer (afficher) le code postal
+		System::String^ getNomRue(void);		//La méthode pour récupérer (afficher) le nom de la rue
+		System::String^ getVille(void);			//La méthode pour récupérer (afficher) le nom de la ville
+		System::String^ getTypeRue(void);		//La méthode pour récupérer (afficher) le type de rue
 	};
 }
