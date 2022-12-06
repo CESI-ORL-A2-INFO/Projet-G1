@@ -324,8 +324,7 @@ namespace ProjetPOO {
 			dataGridViewCellStyle1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::Black;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->gridChiffreAffaire->DefaultCellStyle = dataGridViewCellStyle1;
 			this->gridChiffreAffaire->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)),
@@ -350,8 +349,7 @@ namespace ProjetPOO {
 			dataGridViewCellStyle2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::Color::Black;
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->gridProduitReap->DefaultCellStyle = dataGridViewCellStyle2;
 			this->gridProduitReap->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
@@ -376,8 +374,7 @@ namespace ProjetPOO {
 			dataGridViewCellStyle3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::Black;
 			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->gridAchat->DefaultCellStyle = dataGridViewCellStyle3;
 			this->gridAchat->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
@@ -402,8 +399,7 @@ namespace ProjetPOO {
 			dataGridViewCellStyle4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::Color::Black;
 			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->gridPlusVendus->DefaultCellStyle = dataGridViewCellStyle4;
 			this->gridPlusVendus->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
@@ -428,8 +424,7 @@ namespace ProjetPOO {
 			dataGridViewCellStyle5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			dataGridViewCellStyle5->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			dataGridViewCellStyle5->SelectionForeColor = System::Drawing::Color::Black;
 			dataGridViewCellStyle5->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->gridMoinsVendus->DefaultCellStyle = dataGridViewCellStyle5;
 			this->gridMoinsVendus->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
@@ -498,8 +493,7 @@ namespace ProjetPOO {
 			dataGridViewCellStyle6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(95)), static_cast<System::Int32>(static_cast<System::Byte>(194)),
 				static_cast<System::Int32>(static_cast<System::Byte>(186)));
 			dataGridViewCellStyle6->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(59)),
-				static_cast<System::Int32>(static_cast<System::Byte>(85)), static_cast<System::Int32>(static_cast<System::Byte>(109)));
+			dataGridViewCellStyle6->SelectionForeColor = System::Drawing::Color::Black;
 			dataGridViewCellStyle6->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->gridPanierMoy->DefaultCellStyle = dataGridViewCellStyle6;
 			this->gridPanierMoy->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(11)), static_cast<System::Int32>(static_cast<System::Byte>(22)),
