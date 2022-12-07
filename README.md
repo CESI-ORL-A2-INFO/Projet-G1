@@ -68,8 +68,6 @@ L'application vient tout juste d'être exécutable. Les fenêtres sont toutes ut
 ### Instruction pour l’installation et l’utilisation.
 
 
-***
-### Bugs connus.
 
 
 ***
