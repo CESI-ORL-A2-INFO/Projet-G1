@@ -63,6 +63,13 @@ L'application vient tout juste d'être exécutable. Les fenêtres sont toutes ut
 ***
 ### Les exigences concernant l’environnement de développement.
 
+Pour mener à bien ce projet, nous avons été contraints d'utiliser un certain nombre d'outils pour réussir à nous communiquer les changements en temps et en heure pour ne pas avoir à attendre d'être ensemble pour travailler.  
+
+Par exemple, nous avons utilisé Visual Studio pour réaliser le code de l'application que vous avez à disposition et communiquer également avec la base de données dont vous aurez besoin.  
+
+Pour la base de données en question, nous avons fait appel aux services Microsoft Azure qui permettaient d'acquérir une base de données facilement utilisable et partageable par le biais d'un identifiant et d'un mot de passe.  
+
+Il nous fallait aussi utiliser la plateforme GitHub pour se partager le code principal ainsi que chaque branche que chaque membre du groupe gérait. Cela nous a ainsi permis d'avancer au fur et à mesure, chacun de notre côté, tout en utilisant le système de push et pull de Visual Studio pour tout mettre en commun grâce aux services de GitHub.  
 
 ***
 ### Instruction pour l’installation et l’utilisation.
