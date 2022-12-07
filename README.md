@@ -72,11 +72,6 @@ Pour la base de données en question, nous avons fait appel aux services Microso
 Il nous fallait aussi utiliser la plateforme GitHub pour se partager le code principal ainsi que chaque branche que chaque membre du groupe gérait. Cela nous a ainsi permis d'avancer au fur et à mesure, chacun de notre côté, tout en utilisant le système de push et pull de Visual Studio pour tout mettre en commun grâce aux services de GitHub.  
 
 ***
-### Instruction pour l’installation et l’utilisation.
-
-
-
-
 ***
 ### Droits d'auteurs et informations sur la licence.
 
